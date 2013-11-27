@@ -1,6 +1,11 @@
 ehu 0.7.3 -  11/2013
 
 
+--- Description ---
+EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata).  The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and interface with arduino board and provide a set of utilities. EHU encapsulates the complexity of programming with PureData to allow for rapid prototyping of interactive systems. EHU is developed for people with basic knowledge of PD but also for more advanced users to ease and speed up as much as possible the development. EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, controlling audio, plus general utilities.
+
+
+
 -- Contact --
 info@ixi-audio.net 
 any type of feedback and/or contributions are welcome
@@ -25,6 +30,8 @@ You should have received a copy of the GNU General Public License along with thi
 The pduino abstractions (port, analog_input, analog_output, digital_input digital_output_pwm,  set_input, digital_IO_mode) are based on code taken from arduino-help.pd example by Gerda Strobl and Georg Holtzmann licensed with GNU GPL
 
 
+
+
 --- System requirements ---
 ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. However those are also used and you will need to install them manually: Pduino (arduino) and xsample 
 
@@ -35,9 +42,6 @@ http://puredata.org/Members/hans
 - Pduino can be downloaded from http://at.or.at/hans/pd/objects.html you just need to copy the arduino.pd file into the extra folder inside pd. 
 
 
-
---- Description ---
-EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata).  The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and interface with arduino board and provide a set of utilities. EHU encapsulates the complexity of programming with PureData to allow for rapid prototyping of interactive systems. EHU is developed for people with basic knowledge of PD but also for more advanced users to ease and speed up as much as possible the development. EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, controlling audio, plus general utilities.
 
 
 
