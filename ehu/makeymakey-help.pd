@@ -1,0 +1,29 @@
+#N canvas 332 165 676 431 10;
+#X declare -lib ggee;
+#X obj 292 198 cnv 15 370 150 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 14 28 cnv 15 270 150 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 387 65 bng 30 250 50 0 empty empty click_me 0 -6 0 10 -258079
+-1 -1;
+#X text 402 108 open graphics window;
+#X obj 387 126 ehu/gem/win 400 300;
+#X obj 67 216 ehu/gem/video homer.avi;
+#X obj 67 305 ehu/gem/texture 200 150 400 300;
+#X obj 170 273 print;
+#X obj 28 93 ehu/makeymakey;
+#X text 295 207 outlets :;
+#X text 19 34 this just wraps the GEM mouse and keyboard objects;
+#X text 19 48 listening to the makeymakey events;
+#X text 366 2 ** if the graphics windows does not have the focus;
+#X text 387 19 the events are not detected **;
+#X text 16 1 makeymakey abstraction;
+#X text 298 225 mouse X / mouse Y / left down / left up / middle down
+/ middle up / right down / right up / W pressed / A pressed / S pressed
+/ D pressed / F pressed;
+#X connect 2 0 4 0;
+#X connect 2 0 5 1;
+#X connect 5 0 6 0;
+#X connect 5 5 7 0;
+#X connect 8 0 6 2;
+#X connect 8 1 6 3;

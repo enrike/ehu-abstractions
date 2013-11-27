@@ -1,0 +1,74 @@
+#N canvas 519 48 419 554 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
+#X declare -lib xsample;
+#X floatatom 107 126 5 0 0 0 - - -;
+#X obj 168 112 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 18 197 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 127 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 147 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 167 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 136 -3 bng 40 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X text 158 58 time;
+#X text 184 110 end;
+#X obj 54 230 t b b b b;
+#X obj 136 220 t b b b b;
+#X obj 209 223 t b b b b;
+#X obj 292 223 t b b b b;
+#X msg 54 256 0;
+#X msg 86 256 1;
+#X msg 165 250 0;
+#X msg 136 250 50;
+#X msg 292 249 80;
+#X msg 244 251 1;
+#X msg 325 249 0;
+#X msg 209 250 0;
+#X msg 47 59 500 2000 600 3000;
+#X obj 107 148 select 0 1 2 3 4;
+#X obj 188 175 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 47 87 ehu/timed_bang;
+#X floatatom 47 126 5 0 0 0 - - -;
+#X text 37 194 started!;
+#X obj 232 82 ehu/gem/win 640 450;
+#X obj 77 338 ehu/gem/video homer.avi;
+#X obj 77 427 ehu/gem/texture 320 225 640 450;
+#X connect 0 0 22 0;
+#X connect 3 0 9 0;
+#X connect 4 0 10 0;
+#X connect 5 0 11 0;
+#X connect 6 0 21 0;
+#X connect 6 0 27 0;
+#X connect 9 0 13 0;
+#X connect 9 1 14 0;
+#X connect 10 0 16 0;
+#X connect 10 1 15 0;
+#X connect 11 0 20 0;
+#X connect 11 1 18 0;
+#X connect 12 0 17 0;
+#X connect 12 1 19 0;
+#X connect 13 0 28 4;
+#X connect 14 0 28 1;
+#X connect 15 0 28 1;
+#X connect 16 0 28 4;
+#X connect 17 0 28 4;
+#X connect 18 0 28 1;
+#X connect 19 0 28 1;
+#X connect 20 0 28 4;
+#X connect 21 0 24 0;
+#X connect 22 0 2 0;
+#X connect 22 1 3 0;
+#X connect 22 2 4 0;
+#X connect 22 3 5 0;
+#X connect 22 4 23 0;
+#X connect 23 0 12 0;
+#X connect 24 0 25 0;
+#X connect 24 1 0 0;
+#X connect 24 2 1 0;
+#X connect 28 0 29 0;

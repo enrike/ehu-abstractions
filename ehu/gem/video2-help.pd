@@ -1,0 +1,61 @@
+#N canvas 192 159 714 376 10;
+#X declare -lib ggee;
+#X obj 26 144 cnv 15 330 110 empty empty empty 20 12 0 14 -4034 -66577
+0;
+#X obj 54 157 ehu/gem/video2 ../../examples/homer.avi;
+#X obj 163 13 ehu/gem/win 600 400;
+#X obj 45 281 ehu/gem/texture 300 200 600 400;
+#X text 349 10 ehu/video2 help file;
+#X text 322 143 init arguments are : path to video file;
+#X obj 37 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X obj 62 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
+;
+#X msg 105 81 ../../examples/homer.avi;
+#X obj 139 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X floatatom 218 108 5 0 0 0 - - -;
+#X floatatom 258 108 5 0 0 0 - - -;
+#X floatatom 300 109 5 0 0 0 - - -;
+#X text 321 161 inlets are : 1 render on off \, 2 play/pause \, 3 path
+of file to import \, 4 toogle loop \, 5 fps \, 6 gotoframe \, 7 loop
+start frame \, 8 loop end frame;
+#X floatatom 183 107 5 0 0 0 - - -;
+#X text 321 210 outlets are : 1 video texture data \, 2 video length
+\, 3 width \, 4 height \, 5 current frame \, 6 bangs on last frame
+\, 7 left sound channel \, 8 right sound channel;
+#X obj 296 321 ehu/out~;
+#X floatatom 77 255 5 0 0 0 - - -;
+#X floatatom 114 256 5 0 0 0 - - -;
+#X floatatom 154 257 5 0 0 0 - - -;
+#X floatatom 193 258 5 0 0 0 - - -;
+#X obj 235 258 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 163 43 ehu/dsp;
+#X obj 36 6 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X text 349 31 reads a video file and provides control over several
+parameters;
+#X text 350 64 ** for the sound to work you need to extract the audio
+from the video into a wav file next to the video file and with the
+same name as the video but with .wav extension;
+#X connect 1 0 3 0;
+#X connect 1 1 17 0;
+#X connect 1 2 18 0;
+#X connect 1 3 19 0;
+#X connect 1 4 20 0;
+#X connect 1 5 21 0;
+#X connect 1 6 16 0;
+#X connect 1 7 16 1;
+#X connect 6 0 1 0;
+#X connect 7 0 1 1;
+#X connect 8 0 1 2;
+#X connect 9 0 1 3;
+#X connect 10 0 1 5;
+#X connect 11 0 1 6;
+#X connect 12 0 1 7;
+#X connect 14 0 1 4;
+#X connect 23 0 2 0;
+#X connect 23 0 22 0;
+#X connect 23 0 6 0;
+#X connect 23 0 7 0;

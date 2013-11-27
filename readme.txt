@@ -1,0 +1,244 @@
+ehu 0.7.3 -  11/2013
+
+
+-- Contact --
+info@ixi-audio.net 
+any type of feedback and/or contributions are welcome
+
+-- HOW TO INSTALL THIS LIBRARY? --
+Like any other PD library
+http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
+You can just keep the ehu folder next to your patches. For instance move the ehu folder into the examples folder and you should be able to run the patches in the examples folder.
+
+
+
+--- License --- GPL
+This library is free software; you can redistribute it and/or modify it under the terms 
+of the Lesser GNU, General Public License as published by the Free Software Foundation.
+
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
+ See the GNU General Public License for more details.
+You should have received a copy of the GNU General Public License along with this library;
+ if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
+ MA 02111-1307 USA
+
+The pduino abstractions (port, analog_input, analog_output, digital_input digital_output_pwm,  set_input, digital_IO_mode) are based on code taken from arduino-help.pd example by Gerda Strobl and Georg Holtzmann licensed with GNU GPL
+
+
+--- System requirements ---
+ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. However those are also used and you will need to install them manually: Pduino (arduino) and xsample 
+
+- Download the extended version of PD from
+http://puredata.org/downloads 
+http://puredata.org/Members/hans
+
+- Pduino can be downloaded from http://at.or.at/hans/pd/objects.html you just need to copy the arduino.pd file into the extra folder inside pd. 
+
+
+
+--- Description ---
+EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata).  The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and interface with arduino board and provide a set of utilities. EHU encapsulates the complexity of programming with PureData to allow for rapid prototyping of interactive systems. EHU is developed for people with basic knowledge of PD but also for more advanced users to ease and speed up as much as possible the development. EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, controlling audio, plus general utilities.
+
+
+
+: Abstractions included in EHU : (check help files and examples included for further details)
+
++ graphics/video (GEM based) :
+ehu/gem/win : opens/closes the GEM graphics window
+ehu/gem/mouse : reports the mouse coordinates and click down/up events for all mouse buttons
+ehu/gem/video : reads a video file 
+ehu/gem/picture : reads an still image (TIFF, JPG, PNG) 
+ehu/gem/cam : reads video from a camera  
+ehu/gem/rect : draws a rectangle 
+ehu/gem/circle : draws a circle
+ehu/gem/text : draws a text
+ehu/gem/texture : renders the output of a picture, cam or video into a rectangle or circle
+
++ video sensors : (GEM based)
+ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
+
++ general utilities:
+ehu/abs_path : given a filename located in the same directory where the current working patch is, this returns the absolute path for that file 
+ehu/rand_file : given a path to a directory it outputs paths to random files located in it
+ehu/rand_list . given a list of items (filenames, numbers) it outputs a random item from it on bang
+ehu/loop_list : given a list or items (filenames, numbers) it loops them on bang 
+ehu/timed_bang : given a list of times (in milliseconds) it outputs bangs on timeouts. (its a kind of sequencer)
+ehu/follow : follows values with delay. Eases discontinuities in streams of numbers
+ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
+ehu/envelope : just wraps envgen adding some controls. outputs an envelope line. It is mainly used to control the envelope of a sound but also any other value (for eg. xloc of a video).
+ehu/force : forces a value to a stay in threshold if smaller or bigger
+ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
+ehu/moses4 : routes stream of values in two, three or four outlets
+ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
+
++ audio abstractions :
+ehu/dsp : toogles Pure Data's DSP (Digital Sound Processing) on/off
+ehu/splayer~ : just plays a sound sample file with few control options
+ehu/splayer2~ : plays or records-and-plays a sound sample file with many control options
+ehu/out~ : stereo sound output (dac~) with volume slider/mute and number
+ehu/in~ : stereo sound input (adc~) with volume slider/mute and number
+ehu/recorder~ : records input signal into a hard drive as sound file.
+ehu/del~ : just a basic delay
+ehu/rev~ : GUI to freeverb~ reverb
+ehu/mix~ : mixes and fades two sound channels
+ehu/ring~ : basic ring modulation
+ehu/vol~ : controls volume of a sound signal with volume slider/mute and number
+ehu/plot : displays the waveform of an audio signal
+
++ audio "sensors" :
+ehu/pitch_sensor : analyses pitch and amplitude of sound signal (just wraps fiddle~)
+ehu/hit_sensor : detects hits or beats in a sound signal (just wraps bonk~)
+
++ arduino : 
+ehu/arduino/control : opens/closes the COM port where arduino is conected
+ehu/arduino/set_analog : switches inputs on and off 
+ehu/arduino/set_digital : sets mode (input or output) for digital pins 
+ehu/arduino/get_analog : reports input on analog pins 
+ehu/arduino/get_digital : reports input on digital pins 
+ehu/arduino/send_analog : sends analog output pins (digital 9,10,11). Uses Pulse Width Modulation PWM
+ehu/arduino/send_digital : sends output on digital pins 
+
+
+
+
+
+
+-- How to use ---
+
+Check the examples folder. They illustrate different ways to use the abstractions.
+
+GUI : Most of the abstractions can be controlled from the inlets but also from the GUI 
+embeded widgets in them. Each GUI widget is controlled via one of the inlets. The main purpose of this is to cope with two different needs. One the one hand a 'live code' situation such as a concert or a quick prototyping work, on the other hand an installation situation where the patch is finished and runs on its own.
+
+
+* NOTES * 
+
+- The video abstraction wont play the sound track from video file. You need to provide a wav file with the same name as the video but with .wav extension next to the video file containing the audio track. For example : train.mov, train.wav. This is because GEM is mainly focused on video and 3D and it does not automatically read the audio from the video files.
+
+- paths to files are relative to the folder you are working. So it is a good idea to save 
+working patches before starting to work on them.
+
+- for transparency use TIFF images with alpha chanel
+
+- Render order :
+graphical abstracions (cam, video, picture ...) take a message "set" with an int 
+number that sets its rendering order. Higher values render on top, min value is 1
+
+- Render objects vs reader objects:
+'Reader' objects load or read data such as images (ehu/gem/picture), videos (ehu/gem/video) or stream from webcam (ehu/gem/cam). The ehu/gem/texture object render the texture data from a 'reader' into a shape. 
+
+- Quality/mode
+Pass a message [quality 1( or [quality 0( to ehu/win to change redeing quality of images and video. Default is quality 1
+Pass a message [mode 1( or [mode 0( to ehu/win if you experince problems with video not being renderd (white square with no video), some graphic card require mode 0. Default is mode 1.
+
+
+
+- Video file formats (thanks PD mailing list!) : 
+Mac : Quicktime mov format with mjpeg (motion jpeg) works quite well and doesn't have too much cpu overhead.
+Windows : avi format with dv codec might be running well (so you don't  need to install quicktime).
+GNU/Linux : just try. it depends on the libraries installed in your machine.
+
+
+
+
+- Video effects/filters :
+Gem provides many object to perform operations on video such as pix_contrast, pix_reduce 
+and so on. Check examples provided.
+
+
+
+- Abstractions GUI :
+Some EHU abstractions include embeded GUI elements to control them.  If you dont want to see the GUI, just right click them, select properties > untick "graph on parent" option, then save the file. Next time you open them they wont expose their GUI. Tick "graph on parent" again to revert to GUI mode. Additionally you can broadcast using object "send" a 1/0 message named EHU_gop. This  will be received by all EHU objects. Since this changes the properties of the objects in the library use it at your own risk. However this should reduce CPU load, so you might want to use this if you are using it for situations where the abstractions GUI wont be used (such as an installation or a CPU hungry patch)
+
+
+
+- List of global EHU messages sent :
+"EHU_quality" 1/0 affects the antialias of the images
+"EHU_mode" 1/0 sets the mode to map the image texture, some graphic cards need "mode 0" in order to get any image or video rendered properly.
+Alternatively you can pass a "quality" and "mode " message to ehu/win in the second inlet such as [quality 1( or [mode 0(
+"EHU_gop" toogles the GUI widgets in the ehu objects
+"EHU_win" message is broadcasted by the win object when it is opened. it contains a list with the width and height of the window. You can query that data to be broadcasted at any time by sending a message "EHU_win_get"
+"EHU_comport_closed" when the port is closed or reopened by Arduino
+
+
+
+
+-- Changes ---
+
+0.7.3 11/2013
+fixed a few errors in examples and added comments
+
+0.7.2	11/2013
+video loop was broken
+added more examples and corrected documentation
+added makeymakey object
+
+0.7.1	7/2013
+added rand_file object
+added abs_path object
+minor fixes in splayer~ and splayer2~ to change the way the paths are calculated
+gem/video and gem/video2 almost there
+
+0.7 5/2013
+removed dependency from xgroove~
+splayer and splayer2 introduced
+plot has now a zoom control
+
+0.6 12/2010
+- Separated data reading from rendering by creating a texture object specialised on rendering. Cam/picture and video are focused now only in reading the data from the files.
+- Several changes in track object
+
+0.5 04/10
+- render and reader funcionality separated into different objects. It allows for example to have multiple copies of the stream of a camara into screen.
+
+
+0.4 11/09
+- renamed arduino abstractions with get/set names to make it more clear.
+- added list_rand / ifnew / moses4 abstractions
+- arduino and gem abstractions have its own namespace ehu/arduino and ehu/gem
+
+0.3 12/08
+- new structure with folders documentation, ehu, examples 
+- it can be installed now into extra folder within PD
+- adding few many new objects for sound, arduino, utilities plus help and examples
+- updating to PD extended 0.40.3
+- major clean up/rewrite/creation of abstractions
+- added GOP message to show/hide "graph on parent" GUI
+
+0.2 5/08
+- mayor cleanup. kind of usable now.
+
+0.1.2 6/07
+- examples combined with help files
+- objects have now graphic GUI integrated (graph on parent => True)
+
+0.1.1 5/07
+- added filter examples
+- changed names to [ehu/video] format to avoid having to set path
+- removed open import dialogue. paths to files must be relative from now on.
+
+0.1 5/07
+- basic patches created
+
+
+
+
+
+--- To do ---
+
+- timed_bang : on/of, fix loop 
+- video recorder
+- cuadrante
+- video does not bang on loop when go_to
+- fix bypass in picture object. should go back to original image when bypass goes off
+- movement2 objet, pix_blob abs for color track
+- track abstraction anadir rectangulo de referencia dentro de la abstraccion 
+
+
+
+-- Aknowledgements --
+The EHU library is supported by the Fine Arts college at the UPV/EHU Public University of the Basque Country (Euskal Herriko Universitatea, hence the name EHU) http://www.ehu.es. It has been developed in collaboration with Josu Rekalde from the Arte y Tecnologia Department
+
+
+
+

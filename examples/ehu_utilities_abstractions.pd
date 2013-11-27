@@ -1,0 +1,42 @@
+#N canvas 352 56 641 692 10;
+#X declare -lib ggee;
+#X obj 24 26 ehu/rand_list;
+#X obj 23 55 ehu/loop_list;
+#X obj 22 93 ehu/timed_bang;
+#X obj 23 130 ehu/follow;
+#X obj 25 180 ehu/elastic_follow;
+#X obj 20 238 ehu/packer2;
+#X obj 102 238 ehu/packer3;
+#X obj 219 237 ehu/packer4;
+#X obj 24 395 ehu/envelope;
+#X text 161 18 given a list of items (filenames \, numbers) it outputs
+a random item from it on bang;
+#X text 165 84 given a list of times (in milliseconds) it outputs bangs
+on timeouts. (its a kind of sequencer);
+#X text 164 128 follows values with delay. Eases discontinuities in
+streams of numbers;
+#X text 162 179 follows (elastically) values with delay. Eases discontinuities
+in streams of numbers;
+#X text 371 238 packs a message with a name and N values;
+#X text 253 412 just wraps envgen adding some controls. outputs an
+envelope line. It is mainly used to control the envelope of an audio
+signal but also any other value (for eg. xloc of a video).;
+#X obj 28 325 ehu/timed_spigot;
+#X obj 27 357 ehu/moses4;
+#X text 161 294 forces a value to a stay in threshold if smaller or
+bigger;
+#X text 165 325 allows a value to pass only every N milliseconds;
+#X text 169 356 routes stream of values in two \, three or four outlets
+;
+#X obj 26 295 ehu/force;
+#X text 165 51 given a list or items (filenames \, numbers) it loops
+them on bang steping one item at each bang;
+#X text 159 587 given a path to a directory it outputs randomly the
+path of files within it on bang;
+#X obj 27 590 ehu/rand_file;
+#X obj 29 638 ehu/abs_path;
+#X text 159 631 given a filename located in the same directory where
+the;
+#X text 158 649 current working patch is \, this returns the absolute
+path;
+#X text 158 664 for that file;

@@ -1,0 +1,31 @@
+#N canvas 457 45 539 714 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
+#X declare -lib ggee;
+#X obj 24 51 ehu/gem/mouse;
+#X obj 25 17 ehu/gem/win 800 600;
+#X obj 14 464 ehu/gem/rect 10 10 130 200;
+#X obj 14 549 ehu/gem/circle 10 10 100;
+#X obj 16 727 ehu/gem/track;
+#X text 186 15 controls the GEM graphics window;
+#X text 111 49 reports the mouse coordinates and click down/up events
+for all mouse buttons;
+#X obj 15 293 ehu/gem/picture imagen1.jpg;
+#X obj 20 80 ehu/gem/video homer1.avi;
+#X obj 28 229 ehu/gem/cam 0;
+#X text 127 748 basic track of movement from a video stream (ehu/gem/cam
+or ehu/gem/video);
+#X text 232 666 draws a text;
+#X text 193 296 opens and controls still image (TIFF \, JPG \, PNG)
+;
+#X text 188 89 opens and controls a video file;
+#X text 166 246 controls a video camera device;
+#X obj 13 361 ehu/gem/texture 0 0 100 100;
+#X text 206 385 renders the output of a cam \, image \, video object
+;
+#X text 200 486 draws a rectangle;
+#X text 179 576 draws a circle;
+#X text 212 406 into a circle or a rectangle;
+#X obj 14 638 ehu/gem/text 100 200 100 45 hello!;
+#X obj 15 139 ehu/gem/video2 homer1.avi;
+#X text 212 156 more complex object to control a video file;
