@@ -1,0 +1,46 @@
+#N canvas 463 118 559 559 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
+#X text 374 18 PD dsp on/off;
+#X obj 288 324 cnv 15 250 150 empty empty empty 20 12 0 14 -233017
+-66577 0;
+#X obj 320 439 ehu/splayer~;
+#X obj 343 417 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 320 396 ehu/abs_path;
+#X msg 320 377 numeros.wav;
+#X obj 297 17 ehu/dsp;
+#X obj 118 475 ehu/out~;
+#X text 301 330 SIMPLE SAMPLE PLAYER;
+#X text 309 347 just plays a sound file;
+#X obj 297 -7 loadbang;
+#X obj 464 328 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113
+-1 -1;
+#X obj 9 144 cnv 15 250 200 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X obj 65 160 ehu/splayer2~;
+#X obj 108 121 ehu/abs_path;
+#X msg 108 102 numeros.wav;
+#X obj 85 -14 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+-1;
+#X text 106 81 local path;
+#X text 104 38 absolute path;
+#X text 219 158 COMPLEX SAMPLE PLAYER;
+#X text 221 174 plays a sample with many options;
+#X msg 75 57 /home/blahblah/pd/ehu_abstractions/examples/numeros.wav
+;
+#X connect 2 0 7 0;
+#X connect 2 1 7 1;
+#X connect 3 0 2 1;
+#X connect 4 0 2 0;
+#X connect 5 0 4 0;
+#X connect 10 0 6 0;
+#X connect 11 0 5 0;
+#X connect 11 0 3 0;
+#X connect 13 0 7 0;
+#X connect 13 1 7 1;
+#X connect 14 0 13 1;
+#X connect 15 0 14 0;
+#X connect 16 0 13 2;
+#X connect 16 0 15 0;
+#X connect 21 0 13 1;

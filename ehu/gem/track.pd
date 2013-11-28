@@ -1,4 +1,4 @@
-#N canvas 110 0 690 734 10;
+#N canvas 167 41 690 734 10;
 #X text 4 201 inserts alpha;
 #X text 123 252 4 to use alpha;
 #X obj 141 202 / 100;

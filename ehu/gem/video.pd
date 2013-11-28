@@ -1,4 +1,4 @@
-#N canvas 87 87 810 581 10;
+#N canvas 81 78 810 581 10;
 #X declare -lib ggee;
 #X msg -89 147 open \$1;
 #X obj 0 -130 inlet;
@@ -23,7 +23,7 @@
 #X obj -28 149 gemhead;
 #X obj 3 16 cnv 15 85 32 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X obj 5 30 tgl 15 0 empty empty on 0 -6 0 7 -262144 -1 -1 1 1;
+#X obj 5 30 tgl 15 0 empty empty on 0 -6 0 7 -262144 -1 -1 0 1;
 #X obj 24 30 tgl 15 0 empty empty play -2 -6 0 7 -262144 -1 -1 0 1
 ;
 #X obj 44 30 tgl 15 0 empty empty loop 0 -6 0 7 -262144 -1 -1 1 1;
@@ -54,7 +54,7 @@
 #X text -50 -147 play/pause;
 #X obj 149 136 s \$0snd;
 #X obj -77 121 r \$0snd;
-#N canvas 78 347 450 353 frame_counter 0;
+#N canvas 76 344 450 353 frame_counter 0;
 #X obj 63 11 inlet;
 #X obj 144 10 inlet;
 #X obj 189 13 inlet;
@@ -62,7 +62,7 @@
 #X obj 56 299 outlet;
 #X obj 157 304 outlet;
 #X obj 309 295 outlet;
-#N canvas 662 359 271 298 fps_counter 0;
+#N canvas 660 384 271 298 fps_counter 0;
 #X obj 89 48 t b f;
 #X msg 89 67 1000;
 #X text 120 87 <fpstomsc;
@@ -224,8 +224,13 @@
 #X text 526 332 audio;
 #X obj 355 177 spigot;
 #X msg 355 201 1;
-#X msg 510 174 open /usr/lib/pd-extended/extra/ehu/gem/.wav;
+#X msg 510 174 open /home/r2d2/Dropbox/ixi/pd/ehu_abstractions2/examples/whistle.wav
+;
 #X obj 152 291 r \$0l;
+#X text 172 -10 fps;
+#X obj 139 -6 f \$2;
+#X obj 139 14 select 0;
+#X msg 184 35 30;
 #X connect 0 0 26 0;
 #X connect 1 0 28 0;
 #X connect 2 0 23 0;
@@ -269,6 +274,7 @@
 #X connect 56 0 49 0;
 #X connect 56 0 61 0;
 #X connect 57 0 28 0;
+#X connect 57 0 77 0;
 #X connect 59 1 20 0;
 #X connect 59 2 22 0;
 #X connect 60 0 68 0;
@@ -289,4 +295,8 @@
 #X connect 74 0 66 0;
 #X connect 74 0 69 0;
 #X connect 75 0 51 3;
+#X connect 77 0 78 0;
+#X connect 78 0 51 1;
+#X connect 78 1 79 0;
+#X connect 79 0 51 1;
 #X coords 0 -1 1 1 88 50 1 1 1;

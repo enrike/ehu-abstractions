@@ -1,4 +1,4 @@
-#N canvas 382 71 518 344 10;
+#N canvas 380 68 518 344 10;
 #X declare -lib flatspace;
 #X declare -lib ggee;
 #X obj 13 7 bng 30 250 50 0 empty empty empty 17 7 0 10 -250685 -1
@@ -10,7 +10,7 @@
 #X obj 44 244 ehu/arduino/set_analog;
 #X obj 213 39 ehu/arduino/get_analog;
 #X obj 305 247 ehu/gem/texture 320 240 640 480;
-#X obj 305 157 ehu/gem/video2 homer.avi;
+#X obj 305 157 ehu/gem/video2 whistle.mp4;
 #X connect 0 0 2 0;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;

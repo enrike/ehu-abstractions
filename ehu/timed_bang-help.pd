@@ -1,4 +1,4 @@
-#N canvas 458 226 531 301 10;
+#N canvas 27 240 531 301 10;
 #X obj 219 86 cnv 15 200 170 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 367 224 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -18,11 +18,9 @@ for each of the steps;
 #X text 17 47 Outlets : bang \, current time \, index \, end reached
 ;
 #X text 11 75 note that index 0 means started;
-#X floatatom 326 226 5 0 0 0 - - -;
 #X connect 2 0 7 1;
 #X connect 3 0 8 0;
 #X connect 7 0 5 0;
 #X connect 7 1 4 0;
-#X connect 7 2 13 0;
-#X connect 7 3 1 0;
+#X connect 7 2 1 0;
 #X connect 8 0 7 0;

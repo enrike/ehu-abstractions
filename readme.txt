@@ -74,6 +74,7 @@ ehu/force : forces a value to a stay in threshold if smaller or bigger
 ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
 ehu/moses4 : routes stream of values in two, three or four outlets
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
+ehu/packer2 , ehu/packer3 , ehu/packer4 : packs N numer of values and spits the array instantly
 
 + audio abstractions :
 ehu/dsp : toogles Pure Data's DSP (Digital Sound Processing) on/off
@@ -83,11 +84,14 @@ ehu/out~ : stereo sound output (dac~) with volume slider/mute and number
 ehu/in~ : stereo sound input (adc~) with volume slider/mute and number
 ehu/recorder~ : records input signal into a hard drive as sound file.
 ehu/del~ : just a basic delay
-ehu/rev~ : GUI to freeverb~ reverb
+ehu/rev~ : GUI to freeverb~ reverb object
 ehu/mix~ : mixes and fades two sound channels
 ehu/ring~ : basic ring modulation
 ehu/vol~ : controls volume of a sound signal with volume slider/mute and number
 ehu/plot : displays the waveform of an audio signal
+ehu/distortion~ : just a distortion. wraps dist~ in creb library to provide a GUI
+ehu/foldover~ : just wraps foldover~ in sigpack library to provide a GUI
+ehu/limiter~ : just wraps limiter~ in zexy library to provide a GUI
 
 + audio "sensors" :
 ehu/pitch_sensor : analyses pitch and amplitude of sound signal (just wraps fiddle~)
