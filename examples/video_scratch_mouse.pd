@@ -1,4 +1,4 @@
-#N canvas 440 329 484 348 10;
+#N canvas 438 326 484 348 10;
 #X declare -lib ggee;
 #X obj 27 -3 bng 30 250 50 0 empty empty empty 17 7 0 10 -250685 -1
 -1;
@@ -8,7 +8,7 @@ the video;
 #X obj 27 43 ehu/gem/win 640 480;
 #X obj 194 36 ehu/gem/mouse;
 #X obj 28 218 ehu/gem/texture 320 240 649 480;
-#X obj 25 100 ehu/gem/video2 whistle.mp4;
+#X obj 25 100 ehu/gem/video whistle.mp4;
 #X connect 0 0 3 0;
 #X connect 2 0 6 5;
 #X connect 4 1 2 0;
