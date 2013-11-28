@@ -56,6 +56,8 @@ ehu/gem/cam : reads video from a camera
 ehu/gem/rect : draws a rectangle 
 ehu/gem/circle : draws a circle
 ehu/gem/text : draws a text
+ehu/gem/video : reads a video file providing basic control options
+ehu/gem/video2 : reads a video file providing a few control options
 ehu/gem/texture : renders the output of a picture, cam or video into a rectangle or circle
 
 + video sensors : (GEM based)
@@ -175,6 +177,8 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 0.7.3 11/2013
 fixed a few errors in examples and added comments
+finally added video and video2 synchronization with audio
+updated examples and docs
 
 0.7.2	11/2013
 video loop was broken

@@ -1,4 +1,4 @@
-#N canvas 321 321 680 424 10;
+#N canvas 333 319 680 424 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 31 9 bng 30 250 50 0 empty empty start_all 17 7 0 10 -258113
@@ -16,7 +16,7 @@ chanel of the video and it is named the same as the video but with
 .WAV extension. For instance: whistle.mp4 and whistle.wav Please beware
 that playing around with pitch might cause the sound to fail to sync
 with the video.;
-#X obj 326 195 ehu/gem/video2 whistle.mp4;
+#X obj 326 195 ehu/gem/video2 whistle.mp4 30;
 #X connect 0 0 1 0;
 #X connect 0 0 3 0;
 #X connect 0 0 5 1;

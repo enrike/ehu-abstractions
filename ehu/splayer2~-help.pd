@@ -1,4 +1,4 @@
-#N canvas 265 150 728 573 10;
+#N canvas 263 147 728 573 10;
 #X declare -lib ggee;
 #X text 7 193 play/pause;
 #X text 51 129 pitch;
@@ -11,7 +11,7 @@
 #X obj 47 216 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
 #X text 105 162 amp;
-#X obj 72 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
+#X obj 72 194 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 88 133 5 0 0 0 - - -;
 #X obj 126 157 vsl 15 50 0 1 0 0 empty empty empty 0 -9 0 10 -262144
@@ -48,7 +48,6 @@
 #X obj 851 509 moses 1;
 #X obj 861 519 moses 1;
 #X text 410 63 plays both MONO and STEREO wav files;
-#X text 410 80 records STEREO input and plays it;
 #X text 412 31 SAMPLE PLAYER;
 #X text 412 235 4 loop on/off;
 #X text 413 250 5 pitch;
@@ -69,8 +68,6 @@
 #X floatatom 170 467 5 0 0 0 - - -;
 #X obj 219 467 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
 -1 -1;
-#X msg 23 51 ../examples/numeros.wav;
-#X msg 13 29 ../examples/numeros_mono.wav;
 #X obj 13 81 ehu/abs_path;
 #X text 414 524 5 bang on max recording time reached;
 #X obj 248 466 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
@@ -78,26 +75,29 @@
 #X obj 260 50 ehu/dsp;
 #X obj 260 29 loadbang;
 #X obj 81 263 splayer2~ 8;
-#X connect 8 0 65 0;
-#X connect 10 0 65 2;
-#X connect 11 0 65 4;
-#X connect 12 0 65 5;
-#X connect 13 0 65 6;
-#X connect 14 0 65 7;
-#X connect 15 0 65 8;
-#X connect 16 0 65 9;
-#X connect 17 0 65 12;
-#X connect 17 1 65 13;
-#X connect 18 0 65 11;
-#X connect 19 0 65 10;
-#X connect 52 0 65 3;
-#X connect 58 0 60 0;
-#X connect 59 0 60 0;
-#X connect 60 0 65 1;
-#X connect 64 0 63 0;
-#X connect 64 0 58 0;
-#X connect 65 0 21 0;
-#X connect 65 1 21 1;
-#X connect 65 2 56 0;
-#X connect 65 3 57 0;
-#X connect 65 4 62 0;
+#X msg 13 30 ../examples/whistle_mono.wav;
+#X msg 23 51 ../examples/whistle.wav;
+#X text 410 80 records STEREO input and plays it (experimental);
+#X connect 8 0 62 0;
+#X connect 10 0 62 2;
+#X connect 11 0 62 4;
+#X connect 12 0 62 5;
+#X connect 13 0 62 6;
+#X connect 14 0 62 7;
+#X connect 15 0 62 8;
+#X connect 16 0 62 9;
+#X connect 17 0 62 12;
+#X connect 17 1 62 13;
+#X connect 18 0 62 11;
+#X connect 19 0 62 10;
+#X connect 51 0 62 3;
+#X connect 57 0 62 1;
+#X connect 61 0 60 0;
+#X connect 61 0 64 0;
+#X connect 62 0 21 0;
+#X connect 62 1 21 1;
+#X connect 62 2 55 0;
+#X connect 62 3 56 0;
+#X connect 62 4 59 0;
+#X connect 63 0 57 0;
+#X connect 64 0 57 0;

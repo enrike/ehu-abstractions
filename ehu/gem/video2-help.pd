@@ -1,25 +1,24 @@
-#N canvas 304 244 714 376 10;
+#N canvas 223 195 714 376 10;
 #X declare -lib ggee;
 #X obj 26 144 cnv 15 330 110 empty empty empty 20 12 0 14 -4034 -66577
 0;
 #X obj 163 13 ehu/gem/win 600 400;
 #X obj 45 281 ehu/gem/texture 300 200 600 400;
 #X text 349 10 ehu/video2 help file;
-#X text 322 143 init arguments are : path to video file;
 #X obj 37 92 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
 #X obj 62 90 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0 1
 ;
-#X obj 139 107 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 139 122 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
-#X floatatom 218 108 5 0 0 0 - - -;
-#X floatatom 258 108 5 0 0 0 - - -;
-#X floatatom 300 109 5 0 0 0 - - -;
-#X text 321 161 inlets are : 1 render on off \, 2 play/pause \, 3 path
+#X floatatom 218 123 5 0 0 0 - - -;
+#X floatatom 258 123 5 0 0 0 - - -;
+#X floatatom 300 124 5 0 0 0 - - -;
+#X text 325 172 inlets are : 1 render on off \, 2 play/pause \, 3 path
 of file to import \, 4 toogle loop \, 5 fps \, 6 gotoframe \, 7 loop
 start frame \, 8 loop end frame;
-#X floatatom 183 107 5 0 0 0 - - -;
-#X text 321 210 outlets are : 1 video texture data \, 2 video length
+#X floatatom 183 122 5 0 0 0 - - -;
+#X text 325 221 outlets are : 1 video texture data \, 2 video length
 \, 3 width \, 4 height \, 5 current frame \, 6 bangs on last frame
 \, 7 left sound channel \, 8 right sound channel;
 #X obj 296 321 ehu/out~;
@@ -37,25 +36,27 @@ parameters;
 #X text 350 64 ** for the sound to work you need to extract the audio
 from the video into a wav file next to the video file and with the
 same name as the video but with .wav extension;
-#X msg 105 81 ../../examples/whistle.mp4;
-#X obj 54 157 ehu/gem/video2 ../../examples/whistle.mp4;
-#X connect 5 0 25 0;
-#X connect 6 0 25 1;
-#X connect 7 0 25 3;
-#X connect 8 0 25 5;
-#X connect 9 0 25 6;
-#X connect 10 0 25 7;
-#X connect 12 0 25 4;
-#X connect 21 0 1 0;
-#X connect 21 0 20 0;
-#X connect 21 0 5 0;
-#X connect 21 0 6 0;
-#X connect 24 0 25 2;
-#X connect 25 0 2 0;
-#X connect 25 1 15 0;
-#X connect 25 2 16 0;
-#X connect 25 3 17 0;
-#X connect 25 4 18 0;
-#X connect 25 5 19 0;
-#X connect 25 6 14 0;
-#X connect 25 7 14 1;
+#X msg 103 68 ../../examples/whistle.mp4;
+#X obj 48 155 ehu/gem/video2 ../../examples/whistle.mp4 30;
+#X text 327 146 init arguments are : path to video file \, video FPS
+rate (defaults to 30);
+#X connect 4 0 24 0;
+#X connect 5 0 24 1;
+#X connect 6 0 24 3;
+#X connect 7 0 24 5;
+#X connect 8 0 24 6;
+#X connect 9 0 24 7;
+#X connect 11 0 24 4;
+#X connect 20 0 1 0;
+#X connect 20 0 19 0;
+#X connect 20 0 4 0;
+#X connect 20 0 5 0;
+#X connect 23 0 24 2;
+#X connect 24 0 2 0;
+#X connect 24 1 14 0;
+#X connect 24 2 15 0;
+#X connect 24 3 16 0;
+#X connect 24 4 17 0;
+#X connect 24 5 18 0;
+#X connect 24 6 13 0;
+#X connect 24 7 13 1;
