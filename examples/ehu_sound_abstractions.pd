@@ -60,6 +60,7 @@ and loaded;
 #X obj 696 255 ehu/distortion~;
 #X msg 330 -51 whistle.wav;
 #X msg 330 188 whistle.wav;
+#X obj 708 100 ehu/adsr~;
 #X connect 0 0 16 0;
 #X connect 0 1 16 1;
 #X connect 14 0 19 0;

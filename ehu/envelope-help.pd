@@ -1,5 +1,4 @@
-#N canvas 108 130 452 311 10;
-#X obj 209 44 ehu/envelope 0 100 1 40;
+#N canvas 119 240 569 332 10;
 #X obj 39 254 ehu/out~;
 #X obj 209 4 bng 25 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
@@ -19,15 +18,19 @@
 #X obj 13 49 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1 1
 ;
 #X obj 12 73 metro 1000;
-#X connect 0 0 12 1;
-#X connect 0 1 3 0;
-#X connect 2 0 0 0;
-#X connect 7 0 0 1;
-#X connect 8 0 0 2;
-#X connect 11 0 10 0;
-#X connect 11 0 14 0;
-#X connect 12 0 1 0;
-#X connect 12 0 1 1;
-#X connect 13 0 12 0;
-#X connect 14 0 15 0;
-#X connect 15 0 2 0;
+#X obj 209 44 ehu/envelope 300;
+#X text 420 -3 list;
+#X msg 415 17 0 7 1 5 0.4 10 0.2 50;
+#X connect 1 0 15 0;
+#X connect 6 0 15 1;
+#X connect 7 0 15 2;
+#X connect 10 0 9 0;
+#X connect 10 0 13 0;
+#X connect 11 0 0 0;
+#X connect 11 0 0 1;
+#X connect 12 0 11 0;
+#X connect 13 0 14 0;
+#X connect 14 0 1 0;
+#X connect 15 0 11 1;
+#X connect 15 1 2 0;
+#X connect 17 0 15 3;
