@@ -1,17 +1,20 @@
-#N canvas 486 174 673 422 10;
+#N canvas 285 169 562 336 10;
 #X declare -lib ggee;
-#X obj 134 216 cnv 15 220 100 empty empty empty 20 12 0 14 -233017
+#X obj 104 196 cnv 15 220 100 empty empty empty 20 12 0 14 -233017
 -66577 0;
-#X obj 171 136 ehu/in~;
-#X obj 390 204 ehu/plot;
-#X obj 378 125 ehu/dsp;
-#X obj 151 253 ehu/recorder~ file.wav 2 44100;
+#X obj 363 177 ehu/plot;
+#X obj 15 181 ehu/dsp;
+#X obj 121 220 ehu/recorder~ file.wav 2 44100;
 #X text 23 5 ehu/recorder~;
-#X text 14 68 inlets : left~ \, right~ filename \, bits(2=16 \, 2=24
-\, 3=32 ) \, rate;
 #X text 9 38 records the incoming signal into a stereo sound file.
 ;
-#X connect 1 0 2 0;
-#X connect 1 0 4 0;
-#X connect 1 1 2 0;
-#X connect 1 1 4 1;
+#X obj 122 119 osc~ 300;
+#X obj 35 122 tgl 40 0 empty empty empty 17 7 0 10 -258113 -1 -1 0
+1;
+#X text 10 59 inlets : left~ \, right~ \, on/off \, filename \, bits(16
+\, 24 \, 32) \, rate;
+#X connect 6 0 1 0;
+#X connect 6 0 3 0;
+#X connect 6 0 3 1;
+#X connect 7 0 2 0;
+#X connect 7 0 3 2;
