@@ -1,8 +1,0 @@
-#N canvas 393 234 450 300 10;
-#X obj 85 66 ehu/packer2 helloworld;
-#X obj 84 144 print from_packer2;
-#X floatatom 69 18 5 0 0 0 - - -;
-#X floatatom 223 23 5 0 0 0 - - -;
-#X connect 0 0 1 0;
-#X connect 2 0 0 0;
-#X connect 3 0 0 1;
