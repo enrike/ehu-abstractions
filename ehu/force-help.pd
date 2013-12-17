@@ -1,4 +1,4 @@
-#N canvas 0 0 450 300 10;
+#N canvas 193 242 450 300 10;
 #X floatatom 99 232 5 0 0 0 - - -;
 #X floatatom 99 109 5 0 0 0 - - -;
 #X floatatom 229 147 5 0 0 0 - - -;
@@ -12,6 +12,9 @@ value;
 #X text 122 128 0 for < \, 1 for >;
 #X text 26 52 default is : bigger than 0;
 #X obj 99 176 ehu/force < 10;
+#X text 248 56 Note: bettwe MAX and MIN objects;
+#X obj 276 79 max 10;
+#X obj 323 79 min 10;
 #X connect 1 0 10 0;
 #X connect 2 0 10 2;
 #X connect 5 0 10 1;

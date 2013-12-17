@@ -1,44 +1,32 @@
-#N canvas 350 53 641 692 10;
+#N canvas 291 117 621 552 10;
 #X declare -lib ggee;
-#X obj 24 56 ehu/rand_list;
-#X obj 23 85 ehu/loop_list;
-#X obj 22 123 ehu/timed_bang;
-#X obj 23 160 ehu/follow;
-#X obj 25 210 ehu/elastic_follow;
-#X obj 20 268 ehu/packer2;
-#X obj 102 268 ehu/packer3;
-#X obj 219 267 ehu/packer4;
-#X obj 24 425 ehu/envelope;
-#X text 161 48 given a list of items (filenames \, numbers) it outputs
-a random item from it on bang;
-#X text 165 114 given a list of times (in milliseconds) it outputs
-bangs on timeouts. (its a kind of sequencer);
-#X text 164 158 follows values with delay. Eases discontinuities in
+#X obj 23 55 ehu/loop_list;
+#X obj 22 93 ehu/timed_bang;
+#X obj 23 130 ehu/follow;
+#X obj 25 180 ehu/elastic_follow;
+#X obj 25 262 ehu/envelope;
+#X text 165 84 given a list of times (in milliseconds) it outputs bangs
+on timeouts. (its a kind of sequencer);
+#X text 164 128 follows values with delay. Eases discontinuities in
 streams of numbers;
-#X text 162 209 follows (elastically) values with delay. Eases discontinuities
+#X text 162 179 follows (elastically) values with delay. Eases discontinuities
 in streams of numbers;
-#X text 371 268 packs a message with a name and N values;
-#X text 253 442 just wraps envgen adding some controls. outputs an
+#X text 254 279 just wraps envgen adding some controls. outputs an
 envelope line. It is mainly used to control the envelope of an audio
 signal but also any other value (for eg. xloc of a video).;
-#X obj 28 355 ehu/timed_spigot;
-#X obj 27 387 ehu/moses4;
-#X text 161 324 forces a value to a stay in threshold if smaller or
-bigger;
-#X text 165 355 allows a value to pass only every N milliseconds;
-#X text 169 386 routes stream of values in two \, three or four outlets
-;
-#X obj 26 325 ehu/force;
-#X text 165 81 given a list or items (filenames \, numbers) it loops
+#X obj 27 232 ehu/timed_spigot;
+#X text 165 51 given a list or items (filenames \, numbers) it loops
 them on bang steping one item at each bang;
-#X obj 27 610 ehu/rand_file;
-#X obj 29 648 ehu/abs_path;
-#X text 159 641 given a filename located in the same directory where
+#X obj 28 447 ehu/rand_file;
+#X obj 30 495 ehu/abs_path;
+#X text 160 488 given a filename located in the same directory where
 the;
-#X text 158 659 current working patch is \, this returns the absolute
+#X text 159 506 current working patch is \, this returns the absolute
 path;
-#X text 159 676 for that file;
-#X text 145 604 given a path to a directory on bang it outputs the
+#X text 160 525 for that file;
+#X text 146 441 given a path to a directory on bang it outputs the
 path of random files within the directory;
 #X text 61 6 RIGHT CLICK > HELP to open help patches for each abstraction
+;
+#X text 164 232 allows incoming values to pass only every N milliseconds
 ;

@@ -1,4 +1,4 @@
-ehu 0.7.3 -  11/2013
+ehu 0.7.4 -  12/2013
 
 
 --- Description ---
@@ -65,17 +65,13 @@ ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
 + general utilities:
 ehu/abs_path : given a filename located in the same directory where the current working patch is, this returns the absolute path for that file 
 ehu/rand_file : given a path to a directory it outputs paths to random files located in it
-ehu/rand_list . given a list of items (filenames, numbers) it outputs a random item from it on bang
 ehu/loop_list : given a list or items (filenames, numbers) it loops them on bang 
 ehu/timed_bang : given a list of times (in milliseconds) it outputs bangs on timeouts. (its a kind of sequencer)
 ehu/follow : follows values with delay. Eases discontinuities in streams of numbers
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
 ehu/envelope : just wraps envgen adding some controls. outputs an envelope line. It is mainly used to control the envelope of a sound but also any other value (for eg. xloc of a video).
-ehu/force : forces a value to a stay in threshold if smaller or bigger
 ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
-ehu/moses4 : routes stream of values in two, three or four outlets
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
-ehu/packer2 , ehu/packer3 , ehu/packer4 : packs N numer of values and spits the array instantly
 
 + audio abstractions :
 ehu/dsp : toogles Pure Data's DSP (Digital Sound Processing) on/off
@@ -173,6 +169,9 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
+
+0.7.4 12/2013
+removed from utilities: force, packers, moses4, rand_list
 
 0.7.3 11/2013
 fixed a few errors in examples and added comments
