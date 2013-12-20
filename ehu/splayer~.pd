@@ -1,7 +1,7 @@
-#N canvas 25 100 532 511 10;
+#N canvas 23 97 532 511 10;
 #X declare -lib ggee;
-#X obj 188 -172 inlet;
-#X text 198 -196 play/pause;
+#X obj 100 -175 inlet;
+#X text 110 -199 play/pause;
 #X obj 112 17 soundfiler;
 #X obj 100 214 *~ 44100;
 #X obj 99 130 phasor~ 1;
@@ -27,8 +27,8 @@
 #X msg 112 -2 read -resize \$1 \$2 \$3;
 #X obj 201 241 tabread4~ \$0sndR;
 #X obj 101 241 tabread4~ \$0snd;
-#X obj 112 -173 inlet;
-#X text 110 -193 path;
+#X obj 189 -175 inlet;
+#X text 187 -195 path;
 #X obj 266 -174 inlet;
 #X text 263 -193 loop;
 #X obj 266 -152 s \$0loop;

@@ -1,4 +1,5 @@
-#N canvas 101 77 894 611 10;
+#N canvas 97 71 894 611 10;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj -128 366 cnv 15 100 60 empty empty empty 20 12 0 14 -233017
 -66577 0;
@@ -67,7 +68,7 @@
 #X obj -24 382 outlet;
 #X obj 20 382 outlet;
 #X text -60 -147 play/pause;
-#X obj 184 140 s \$0snd;
+#X obj 232 148 s \$0snd;
 #X obj -77 121 r \$0snd;
 #N canvas 115 334 450 353 frame_counter 0;
 #X obj 63 11 inlet;
@@ -154,16 +155,16 @@
 #X restore 95 329 pd frame_counter;
 #X text -112 -145 on/off;
 #X obj 115 30 nbx 3 14 0 1e+06 0 0 empty empty end 0 -8 0 8 -228856
--1 -1 0 256;
+-1 -1 73 256;
 #X text 334 -148 end;
 #X text 275 -147 start;
 #X obj 148 30 nbx 3 14 0 100000 0 0 empty empty go_to 0 -8 0 8 -228856
 -1 -1 0 256;
 #X obj 95 287 r \$0play;
 #X obj 203 -102 abs;
-#X obj 184 99 openpanel;
-#X obj 184 119 symbol \$1;
-#N canvas 352 249 442 325 findwav 0;
+#X obj 232 107 openpanel;
+#X obj 232 127 symbol \$1;
+#N canvas 350 246 442 325 findwav 0;
 #X obj 21 30 inlet;
 #X obj 21 215 outlet;
 #X obj 21 107 unpack s s;
@@ -215,14 +216,14 @@
 #X obj 416 344 ehu/splayer~;
 #X text 289 -7 default fps;
 #X obj 504 136 /;
-#X text 484 274 loop;
-#X obj 439 322 f;
-#X obj 476 293 t b b;
+#X text 461 258 loop;
+#X obj 416 306 f;
+#X obj 461 276 t b b;
 #X text 297 -57 fps;
 #X obj 264 -33 select 0;
 #X msg 264 -8 30;
 #X obj 264 -53 \$2;
-#X obj -89 78 ehu/abs_path;
+#X obj 0 -60 ehu/abs_path;
 #X connect 1 0 37 0;
 #X connect 2 0 1 0;
 #X connect 3 0 33 0;
@@ -280,7 +281,7 @@
 #X connect 74 0 63 0;
 #X connect 74 0 75 0;
 #X connect 75 0 29 0;
-#X connect 75 0 82 0;
+#X connect 75 0 82 1;
 #X connect 76 0 65 2;
 #X connect 77 0 76 0;
 #X connect 78 0 40 0;
@@ -289,7 +290,7 @@
 #X connect 82 0 36 0;
 #X connect 82 1 81 0;
 #X connect 84 0 86 0;
-#X connect 86 0 82 1;
+#X connect 86 0 82 0;
 #X connect 87 0 86 0;
 #X connect 87 1 82 3;
 #X connect 89 0 90 0;

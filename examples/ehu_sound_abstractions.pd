@@ -2,6 +2,7 @@
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X declare -lib ggee;
+#X declare -lib ggee;
 #X obj 107 421 ehu/rev~;
 #X obj 108 -5 ehu/dsp;
 #X obj 318 520 ehu/plot;
@@ -40,14 +41,14 @@ note that rev~ just wraps freeverb~ external so that must be installed
 and loaded;
 #X obj 320 -3 ehu/splayer2~;
 #X obj 330 250 ehu/splayer~;
-#X obj 353 228 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 324 218 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X text 476 47 with loads of options;
 #X text 417 248 simply plays a sound file;
 #X text 477 29 plays a sound file;
 #X obj 703 532 ehu/recorder~ rec1.wav;
 #X text 447 324 analyses sound pitch;
-#X obj 330 207 ehu/abs_path;
+#X obj 352 214 ehu/abs_path;
 #X obj 330 -32 ehu/abs_path;
 #X obj 697 337 ehu/foldover~;
 #X obj 700 188 ehu/limiter~;
@@ -58,7 +59,7 @@ and loaded;
 #X text 818 369 kind of distortion;
 #X obj 696 255 ehu/distortion~;
 #X msg 330 -51 whistle.wav;
-#X msg 330 188 whistle.wav;
+#X msg 352 195 whistle.wav;
 #X obj 708 100 ehu/adsr~;
 #X text 695 509 records input to a stereo file;
 #X connect 0 0 16 0;
@@ -76,8 +77,8 @@ and loaded;
 #X connect 25 0 19 0;
 #X connect 25 1 19 1;
 #X connect 26 0 19 0;
-#X connect 27 0 26 1;
-#X connect 33 0 26 0;
+#X connect 27 0 26 0;
+#X connect 33 0 26 1;
 #X connect 34 0 25 1;
 #X connect 42 0 34 0;
 #X connect 43 0 33 0;

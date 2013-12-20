@@ -1,8 +1,9 @@
-#N canvas 159 77 809 479 12;
+#N canvas 157 74 809 479 12;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 41 313 ehu/splayer~;
 #X obj 40 354 ehu/out~;
-#X obj 41 244 ehu/abs_path;
+#X obj 73 239 ehu/abs_path;
 #X obj 111 277 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X floatatom 179 276 5 0 0 0 - - -;
@@ -11,19 +12,19 @@
 #X obj 348 192 ehu/hit_sensor;
 #X floatatom 399 314 5 0 0 0 - - -;
 #X obj 399 345 autoscale 0 2;
-#X obj 47 118 ehu/loop_list;
-#X msg 155 58 whistle.wav whistle2.wav;
-#X obj 47 202 t b s;
-#X msg 67 276 1;
-#X obj 72 154 print;
-#X obj 155 -15 loadbang;
+#X obj 41 118 ehu/loop_list;
+#X msg 149 58 whistle.wav whistle2.wav;
+#X obj 41 202 t b s;
+#X msg 41 270 1;
+#X obj 66 154 print;
+#X obj 149 -6 loadbang;
 #X msg 382 158 98;
 #X msg 418 159 140;
 #X text 393 134 default values for max and min;
-#X text 162 37 list of files;
+#X text 156 37 list of files;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
-#X connect 2 0 0 0;
+#X connect 2 0 0 1;
 #X connect 3 0 0 1;
 #X connect 4 0 0 1;
 #X connect 5 0 6 0;
@@ -37,7 +38,7 @@
 #X connect 11 0 10 1;
 #X connect 12 0 13 0;
 #X connect 12 1 2 0;
-#X connect 13 0 0 1;
+#X connect 13 0 0 0;
 #X connect 15 0 11 0;
 #X connect 15 0 16 0;
 #X connect 15 0 17 0;

@@ -1,4 +1,5 @@
-#N canvas 412 209 612 368 10;
+#N canvas 410 206 612 368 10;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 10 40 cnv 15 320 130 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -6,7 +7,6 @@
 -1 -1;
 #X text 362 130 open graphics window;
 #X obj 347 148 ehu/gem/win 400 300;
-#X obj 12 214 ehu/gem/video homer.avi;
 #X obj 12 275 ehu/gem/texture 200 150 400 300;
 #X obj 76 95 ehu/makeymakey;
 #X text 18 52 this just wraps the GEM mouse and keyboard objects;
@@ -17,8 +17,9 @@ events **;
 #X text 219 299 mouse X / mouse Y / left down / left up / right down
 / right up / W pressed / A pressed / S pressed / D pressed / F pressed
 / SPACE pressed;
+#X obj 12 214 ehu/gem/video whistle.mp4;
 #X connect 1 0 3 0;
-#X connect 1 0 4 1;
-#X connect 4 0 5 0;
-#X connect 6 0 5 2;
-#X connect 6 1 5 3;
+#X connect 1 0 11 1;
+#X connect 5 0 4 2;
+#X connect 5 1 4 3;
+#X connect 11 0 4 0;
