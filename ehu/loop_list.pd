@@ -1,10 +1,10 @@
-#N canvas 253 274 671 341 10;
+#N canvas 309 157 671 341 10;
 #X obj 135 160 list;
 #X obj 135 181 t l b;
 #X obj 112 44 inlet;
 #X obj 194 40 inlet;
 #X obj 279 181 list length;
-#X msg 135 250 read \$5;
+#X msg 135 250 read \$2;
 #X msg 162 226 set \, add2 read \, adddollar \$1;
 #X obj 135 279 unpack s s;
 #X obj 196 103 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
