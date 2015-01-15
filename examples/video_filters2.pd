@@ -1,4 +1,6 @@
-#N canvas 454 124 609 538 10;
+#N canvas 726 142 609 538 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 29 242 cnv 15 500 60 empty empty empty 20 12 0 14 -162280 -66577
@@ -12,12 +14,12 @@
 #X text 36 317 effects : - last outlet sends the video info out - last
 inlet takes the data back in when filter toogle is ON;
 #X obj 93 438 hsl 100 15 0 1 0 0 empty empty fade -2 -6 0 8 -4034 -1
--1 5100 1;
+-1 4000 1;
 #X floatatom 90 456 5 0 0 0 - - -;
 #X obj 39 473 pix_mix 0;
 #X obj 39 400 pix_contrast;
 #X obj 73 357 nbx 5 14 0 255 0 0 empty empty contrast 0 -6 0 10 -262144
--1 -1 14 256;
+-1 -1 0 256;
 #X obj 108 383 nbx 5 14 0 255 0 0 empty empty saturation 0 -6 0 10
 -262144 -1 -1 0 256;
 #X obj 287 55 ehu/gem/win 640 480;
@@ -27,13 +29,15 @@ inlet takes the data back in when filter toogle is ON;
 #X obj 38 275 pix_separator;
 #X text 139 273 GEM SEPARATES EACH SIGNAL LINE;
 #X text 138 257 JUST TO MAKE SURE;
-#X obj 259 408 ehu/gem/texture 320 240 640 480;
+#X obj 253 435 ehu/gem/texture 320 240 640 480;
 #X text 53 492 and now back to render;
 #X text 26 -5 * fiddle around with the values in the effects in the
 orange area;
 #X obj 38 139 ehu/gem/video whistle.mp4;
 #X obj 350 140 ehu/gem/video whistle.mp4;
 #X obj 357 104 delay 100;
+#X obj 231 356 loadbang;
+#X msg 231 378 0.5;
 #X connect 1 0 21 1;
 #X connect 1 0 22 0;
 #X connect 2 0 1 0;
@@ -50,3 +54,5 @@ orange area;
 #X connect 15 0 7 1;
 #X connect 21 0 14 0;
 #X connect 22 0 12 0;
+#X connect 24 0 25 0;
+#X connect 25 0 5 0;

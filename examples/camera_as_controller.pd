@@ -1,4 +1,5 @@
-#N canvas 453 203 418 474 10;
+#N canvas 775 105 405 488 10;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 26 112 cnv 15 180 80 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -20,21 +21,23 @@
 #X text 53 211 < 400;
 #X obj 240 84 ehu/gem/win 800 600;
 #X obj 54 117 ehu/gem/track;
-#X obj 76 280 ehu/gem/picture imagen1.jpg;
-#X text 248 292 image to display;
-#X obj 76 344 ehu/gem/texture 400 300 800 600;
-#X text 274 365 texture;
-#X text 275 382 renderer;
+#X obj 36 310 ehu/gem/picture imagen1.jpg;
+#X text 208 322 image to display;
+#X obj 36 374 ehu/gem/texture 400 300 800 600;
+#X text 234 395 texture;
+#X text 235 412 renderer;
 #X obj 54 48 ehu/gem/cam 0;
 #X floatatom 112 194 5 0 0 0 - - -;
+#X obj 195 286 ehu/abs_path;
 #X connect 2 0 13 0;
 #X connect 5 0 7 0;
 #X connect 6 0 8 0;
-#X connect 7 0 15 1;
-#X connect 8 0 15 1;
+#X connect 7 0 22 0;
+#X connect 8 0 22 0;
 #X connect 10 0 5 0;
 #X connect 10 1 6 0;
 #X connect 14 1 10 0;
 #X connect 14 1 21 0;
 #X connect 15 0 17 0;
 #X connect 20 0 14 0;
+#X connect 22 0 15 1;

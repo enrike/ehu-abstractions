@@ -1,4 +1,4 @@
-#N canvas 291 117 621 552 10;
+#N canvas 530 104 621 552 10;
 #X declare -lib ggee;
 #X obj 23 55 ehu/loop_list;
 #X obj 22 93 ehu/timed_bang;

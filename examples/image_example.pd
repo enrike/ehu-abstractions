@@ -1,11 +1,11 @@
-#N canvas 531 114 450 300 10;
+#N canvas 529 111 450 300 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 26 21 ehu/gem/win 400 300;
 #X obj 152 187 ehu/gem/texture 100 100 200 200;
 #X msg 311 28 imagen1.jpg;
-#X obj 311 50 abs_path;
 #X obj 152 89 ehu/gem/picture imagen1.jpg;
-#X connect 2 0 3 0;
-#X connect 3 0 4 1;
-#X connect 4 0 1 0;
+#X obj 311 50 ehu/abs_path;
+#X connect 2 0 4 0;
+#X connect 3 0 1 0;
+#X connect 4 0 3 1;
