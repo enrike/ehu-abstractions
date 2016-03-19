@@ -1,9 +1,9 @@
-#N canvas 530 104 621 552 10;
+#N canvas 528 101 621 552 10;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 23 55 ehu/loop_list;
 #X obj 22 93 ehu/timed_bang;
 #X obj 23 130 ehu/follow;
-#X obj 25 180 ehu/elastic_follow;
 #X obj 25 262 ehu/envelope;
 #X text 165 84 given a list of times (in milliseconds) it outputs bangs
 on timeouts. (its a kind of sequencer);
@@ -30,3 +30,4 @@ path of random files within the directory;
 ;
 #X text 164 232 allows incoming values to pass only every N milliseconds
 ;
+#X obj 25 180 ehu/elastic_follow;
