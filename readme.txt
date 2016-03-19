@@ -1,4 +1,4 @@
-ehu 0.7.4 -  12/2013
+ehu 0.7.5 -  03/2016
 
 
 --- Description ---
@@ -169,6 +169,8 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
+0.7.5 03/2016
+updated docs and examples
 
 0.7.4 12/2013
 removed from utilities: force, packers, moses4, rand_list
