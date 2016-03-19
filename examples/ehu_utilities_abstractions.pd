@@ -1,4 +1,4 @@
-#N canvas 528 101 621 552 10;
+#N canvas 262 108 621 552 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 23 55 ehu/loop_list;
@@ -24,10 +24,10 @@ the;
 #X text 159 506 current working patch is \, this returns the absolute
 path;
 #X text 160 525 for that file;
-#X text 146 441 given a path to a directory on bang it outputs the
-path of random files within the directory;
 #X text 61 6 RIGHT CLICK > HELP to open help patches for each abstraction
 ;
 #X text 164 232 allows incoming values to pass only every N milliseconds
 ;
 #X obj 25 180 ehu/elastic_follow;
+#X text 146 441 given a path to a directory on bang it outputs the
+(absolute) path of random files within the directory;
