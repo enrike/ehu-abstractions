@@ -66,6 +66,7 @@ ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
 ehu/abs_path : given a filename located in the same directory where the current working patch is, this returns the absolute path for that file 
 ehu/rand_file : given a path to a directory it outputs paths to random files located in it
 ehu/loop_list : given a list or items (filenames, numbers) it loops them on bang 
+ehu/list_folder: returns a list with the absolute paths of all files in a folder
 ehu/timed_bang : given a list of times (in milliseconds) it outputs bangs on timeouts. (its a kind of sequencer)
 ehu/follow : follows values with delay. Eases discontinuities in streams of numbers
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers

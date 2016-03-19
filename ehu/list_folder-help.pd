@@ -1,0 +1,10 @@
+#N canvas 458 126 402 253 10;
+#X declare -lib ggee;
+#X obj 51 115 ehu/list_folder;
+#X obj 52 158 print ALL_FILES;
+#X text 10 32 returns a list with all the absolute paths of the files
+in the given folder;
+#X msg 52 78 ./;
+#X text 85 82 for instance \, the current folder;
+#X connect 0 0 1 0;
+#X connect 3 0 0 0;
