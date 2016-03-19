@@ -1,18 +1,17 @@
-#N canvas 475 84 410 596 10;
+#N canvas 473 81 410 596 10;
 #X text 136 220 move slowly towards that value;
 #X floatatom 169 193 5 0 0 0 - - -;
 #X obj 40 337 unauthorized/grid grid1 200 0 199 200 0 199 1 1 1 10
-10 134.472 403.332;
-#X obj 39 295 ehu/packer2 values;
+10 137 337;
 #X obj 19 -37 unauthorized/grid grid1 200 0 199 200 0 199 1 1 1 10
-10 114 29;
+10 117 91;
 #X obj 49 213 ehu/follow 150;
 #X text 209 191 num of steps;
 #X text 235 -9 drag the red point to experiment how ehu/follow works
 ;
-#X connect 1 0 5 2;
-#X connect 3 0 2 0;
-#X connect 4 0 5 0;
-#X connect 4 1 5 1;
-#X connect 5 0 3 0;
-#X connect 5 1 3 1;
+#X msg 45 290 goto \$0 \$1;
+#X connect 1 0 4 2;
+#X connect 3 0 4 0;
+#X connect 3 1 4 1;
+#X connect 4 0 7 0;
+#X connect 7 0 2 0;
