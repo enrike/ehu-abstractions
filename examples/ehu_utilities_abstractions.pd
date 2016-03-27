@@ -1,4 +1,5 @@
-#N canvas 262 108 621 552 10;
+#N canvas 364 84 650 618 10;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 23 55 ehu/loop_list;
@@ -31,3 +32,6 @@ path;
 #X obj 25 180 ehu/elastic_follow;
 #X text 146 441 given a path to a directory on bang it outputs the
 (absolute) path of random files within the directory;
+#X obj 31 567 ehu/list_folder;
+#X text 144 563 returns a list with all the absolute paths of the files
+in the given folder;
