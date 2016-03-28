@@ -1,28 +1,30 @@
-ehu 0.7.5 -  03/2016
+ehu 0.7.5 -  03/2016 by www.ixi audio.net
+
+https://github.com/enrike/ehu-abstractions
 
 
 --- Description ---
-EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata).  The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and interface with arduino board and provide a set of utilities. EHU encapsulates the complexity of programming with PureData to allow for rapid prototyping of interactive systems. EHU is developed for people with basic knowledge of PD but also for more advanced users to ease and speed up as much as possible the development. EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, controlling audio, plus general utilities.
-
+EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata). 
+EHU encapsulates the complexity of programming PureData to allow for rapid prototyping of interactive systems. 
+The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and provide a set of utilities. 
+EHU is developed for people with basic knowledge of PD, but also for more advanced users, to ease and speed up as much as possible the development. Most abstractions encapsulate the GUI elements to control, this is to minimise the creation of elements and connections.
+EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). 
+Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, playing samples, audio effects, plus some general utilities.
 
 
 -- Contact --
-info@ixi-audio.net 
-any type of feedback and/or contributions are welcome
+info@ixi-audio.net any type of feedback and/or contributions are welcome
+
 
 -- HOW TO INSTALL THIS LIBRARY? --
-Like any other PD library
-http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
-You can just keep the ehu folder next to your patches. For instance move the ehu folder into the examples folder and you should be able to run the patches in the examples folder.
-
+Like any other PD library http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
+Or you can just keep the ehu folder next to your patches. For instance move the ehu folder into the examples folder and you should be able to run the patches in the examples folder.
 
 
 --- License --- GPL
-This library is free software; you can redistribute it and/or modify it under the terms 
-of the Lesser GNU, General Public License as published by the Free Software Foundation.
+This library is free software; you can redistribute it and/or modify it under the terms of the Lesser GNU, General Public License as published by the Free Software Foundation.
 
-This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.
- See the GNU General Public License for more details.
+This library is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
 You should have received a copy of the GNU General Public License along with this library;
  if not, write to the Free Software Foundation, Inc., 59 Temple Place, Suite 330, Boston,
  MA 02111-1307 USA
@@ -33,7 +35,7 @@ The pduino abstractions (port, analog_input, analog_output, digital_input digita
 
 
 --- System requirements ---
-ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. However those are also used and you will need to install them manually: Pduino (arduino) and xsample 
+ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. However you might need to install manually Pduino (arduino) 
 
 - Download the extended version of PD from
 http://puredata.org/downloads 
@@ -44,56 +46,54 @@ http://puredata.org/Members/hans
 
 
 
-
 : Abstractions included in EHU : (check help files and examples included for further details)
 
 + graphics/video (GEM based) :
 ehu/gem/win : opens/closes the GEM graphics window
 ehu/gem/mouse : reports the mouse coordinates and click down/up events for all mouse buttons
-ehu/gem/video : reads a video file 
-ehu/gem/picture : reads an still image (TIFF, JPG, PNG) 
+ehu/gem/video : reads a video file (including audio channel which must be exported as WAV, check the help file)
+ehu/gem/picture : reads an still image (TIFF, JPG, PNG), allows alpha 
 ehu/gem/cam : reads video from a camera  
+ehu/gem/texture : renders the output of a picture, cam or video
 ehu/gem/rect : draws a rectangle 
 ehu/gem/circle : draws a circle
 ehu/gem/text : draws a text
-ehu/gem/video : reads a video file providing few control options
-ehu/gem/texture : renders the output of a picture, cam or video into a rectangle or circle
 
 + video sensors : (GEM based)
 ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
 
 + general utilities:
-ehu/abs_path : given a filename located in the same directory where the current working patch is, this returns the absolute path for that file 
-ehu/rand_file : given a path to a directory it outputs paths to random files located in it
+ehu/abs_path : given a filename located in the same directory where the current working patch is, it returns the absolute path for that file 
+ehu/rand_file : given a path to a directory it outputs paths to random files located in it on bang
 ehu/loop_list : given a list or items (filenames, numbers) it loops them on bang 
 ehu/list_folder: returns a list with the absolute paths of all files in a folder
 ehu/timed_bang : given a list of times (in milliseconds) it outputs bangs on timeouts. (its a kind of sequencer)
+ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
 ehu/follow : follows values with delay. Eases discontinuities in streams of numbers
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
-ehu/envelope : just wraps envgen adding some controls. outputs an envelope line. It is mainly used to control the envelope of a sound but also any other value (for eg. xloc of a video).
-ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
+ehu/envelope : just wraps envgen adding some controls. outputs an envelope line. It is mainly used to control the envelope of a sound but also any other value (for eg. control the xloc of a video).
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
 
 + audio abstractions :
 ehu/dsp : toogles Pure Data's DSP (Digital Sound Processing) on/off
-ehu/splayer~ : just plays a sound sample file with few control options
+ehu/splayer~ : plays a sound sample file with some control options (pitch, loop)
 ehu/splayer2~ : plays or records-and-plays a sound sample file with many control options
 ehu/out~ : stereo sound output (dac~) with volume slider/mute and number
 ehu/in~ : stereo sound input (adc~) with volume slider/mute and number
-ehu/recorder~ : records input signal into a hard drive as sound file.
+ehu/vol~ : controls volume of a sound signal with volume slider/mute and number
+ehu/mix~ : mixes and fades two sound channels
+ehu/plot : displays the waveform of an audio signal
+ehu/recorder~ : records input signal into a hard drive as sound file (experimental)
 ehu/del~ : just a basic delay
 ehu/rev~ : GUI to freeverb~ reverb object
-ehu/mix~ : mixes and fades two sound channels
 ehu/ring~ : basic ring modulation
-ehu/vol~ : controls volume of a sound signal with volume slider/mute and number
-ehu/plot : displays the waveform of an audio signal
-ehu/distortion~ : just a distortion. wraps dist~ in creb library to provide a GUI
-ehu/foldover~ : just wraps foldover~ in sigpack library to provide a GUI
-ehu/limiter~ : just wraps limiter~ in zexy library to provide a GUI
+ehu/distortion~ : just a distortion. wraps dist~ in creb library and provides a GUI
+ehu/foldover~ : just wraps foldover~ in sigpack library and provides a GUI
+ehu/limiter~ : just wraps limiter~ in zexy library and provides a GUI
 
 + audio "sensors" :
 ehu/pitch_sensor : analyses pitch and amplitude of sound signal (just wraps fiddle~)
-ehu/hit_sensor : detects hits or beats in a sound signal (just wraps bonk~)
+ehu/hit_sensor : detects hits (onsets) in a sound signal (just wraps bonk~)
 
 + arduino : 
 ehu/arduino/control : opens/closes the COM port where arduino is conected
@@ -104,8 +104,13 @@ ehu/arduino/get_digital : reports input on digital pins
 ehu/arduino/send_analog : sends analog output pins (digital 9,10,11). Uses Pulse Width Modulation PWM
 ehu/arduino/send_digital : sends output on digital pins 
 
++ makeymakey :
+ehu/makey : just wraps gemkeyboard and mouse to output the values of the default keys associated with the makeymakey board
 
-
++ DMX : (experimental controls for DMX)
+ehu/dmx/control
+ehu/dmx/matrix
+ehu/dmx/slider
 
 
 
@@ -113,18 +118,14 @@ ehu/arduino/send_digital : sends output on digital pins
 
 Check the examples folder. They illustrate different ways to use the abstractions.
 
-GUI : Most of the abstractions can be controlled from the inlets but also from the GUI 
-embeded widgets in them. Each GUI widget is controlled via one of the inlets. The main purpose of this is to cope with two different needs. One the one hand a 'live code' situation such as a concert or a quick prototyping work, on the other hand an installation situation where the patch is finished and runs on its own.
-
 
 * NOTES * 
 
 - The video abstraction wont play the sound track from video file. You need to provide a wav file with the same name as the video but with .wav extension next to the video file containing the audio track. For example : train.mov, train.wav. This is because GEM is mainly focused on video and 3D and it does not automatically read the audio from the video files.
 
-- paths to files are relative to the folder you are working. So it is a good idea to save 
-working patches before starting to work on them.
+- paths to files are relative to the folder you are working. So it is a good idea to save working patches before starting to work on them.
 
-- for transparency use TIFF images with alpha chanel
+- for image transparency use TIFF images with alpha chanel
 
 - Render order :
 graphical abstracions (cam, video, picture ...) take a message "set" with an int 
@@ -137,26 +138,16 @@ number that sets its rendering order. Higher values render on top, min value is 
 Pass a message [quality 1( or [quality 0( to ehu/win to change redeing quality of images and video. Default is quality 1
 Pass a message [mode 1( or [mode 0( to ehu/win if you experince problems with video not being renderd (white square with no video), some graphic card require mode 0. Default is mode 1.
 
-
-
 - Video file formats (thanks PD mailing list!) : 
 Mac : Quicktime mov format with mjpeg (motion jpeg) works quite well and doesn't have too much cpu overhead.
-Windows : avi format with dv codec might be running well (so you don't  need to install quicktime).
+Windows : avi format with dv codec might be running well (so you don't need to install quicktime).
 GNU/Linux : just try. it depends on the libraries installed in your machine.
 
-
-
-
 - Video effects/filters :
-Gem provides many object to perform operations on video such as pix_contrast, pix_reduce 
-and so on. Check examples provided.
-
-
+Gem provides many object to perform operations on the video signal output by ehu/gem/video or ehu/gem/cam such as pix_contrast, pix_reduce and so on. Check examples provided.
 
 - Abstractions GUI :
-Some EHU abstractions include embeded GUI elements to control them.  If you dont want to see the GUI, just right click them, select properties > untick "graph on parent" option, then save the file. Next time you open them they wont expose their GUI. Tick "graph on parent" again to revert to GUI mode. Additionally you can broadcast using object "send" a 1/0 message named EHU_gop. This  will be received by all EHU objects. Since this changes the properties of the objects in the library use it at your own risk. However this should reduce CPU load, so you might want to use this if you are using it for situations where the abstractions GUI wont be used (such as an installation or a CPU hungry patch)
-
-
+Some EHU abstractions include embeded GUI elements to control them.  If you dont want to see the GUI, just right click them, select properties > untick "graph on parent" option, then save the file. Next time you open them they wont expose their GUI. Tick "graph on parent" again to revert to GUI mode. Additionally you can broadcast using object "send" a 1/0 message named EHU_gop. This  will be received by all active EHU objects. Since this changes the properties of the objects in the library use it at your own risk. However this should reduce CPU load, so you might want to use this if you are using it for situations where the abstractions GUI wont be used (such as an installation or a CPU hungry patch)
 
 - List of global EHU messages sent :
 "EHU_quality" 1/0 affects the antialias of the images
@@ -170,8 +161,8 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
-0.7.5 03/2016
-updated docs and examples
+0.7.5 04/2016
+several fixess all over, updated docs and examples, added list_folder, added experimental DMX controls
 
 0.7.4 12/2013
 removed from utilities: force, packers, moses4, rand_list
@@ -181,12 +172,12 @@ fixed a few errors in examples and added comments
 finally added video and video2 synchronization with audio, but droped video in favor of video2 functionality
 updated examples and docs
 
-0.7.2	11/2013
+0.7.2 11/2013
 video loop was broken
 added more examples and corrected documentation
 added makeymakey object
 
-0.7.1	7/2013
+0.7.1 7/2013
 added rand_file object
 added abs_path object
 minor fixes in splayer~ and splayer2~ to change the way the paths are calculated
@@ -245,12 +236,11 @@ plot has now a zoom control
 - video does not bang on loop when go_to
 - fix bypass in picture object. should go back to original image when bypass goes off
 - movement2 objet, pix_blob abs for color track
-- track abstraction anadir rectangulo de referencia dentro de la abstraccion 
 
 
 
 -- Aknowledgements --
-The EHU library is supported by the Fine Arts college at the UPV/EHU Public University of the Basque Country (Euskal Herriko Universitatea, hence the name EHU) http://www.ehu.es. It has been developed in collaboration with Josu Rekalde from the Arte y Tecnologia Department
+The EHU library is supported by the Fine Arts college at the UPV/EHU Public University of the Basque Country (Euskal Herriko Universitatea, hence the name EHU) http://www.ehu.es. It is developed in collaboration with Josu Rekalde from the Arte y Tecnologia Department
 
 
 
