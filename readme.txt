@@ -156,6 +156,8 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 "EHU_gop" toogles the GUI widgets in the ehu objects
 "EHU_win" message is broadcasted by the win object when it is opened. it contains a list with the width and height of the window. You can query that data to be broadcasted at any time by sending a message "EHU_win_get"
 "EHU_comport_closed" when the port is closed or reopened by Arduino
+"EHU_winopen" when the GEM window is opened
+"EHU_winclose" when the GEM window is closed
 
 
 
@@ -194,7 +196,6 @@ plot has now a zoom control
 
 0.5 04/10
 - render and reader funcionality separated into different objects. It allows for example to have multiple copies of the stream of a camara into screen.
-
 
 0.4 11/09
 - renamed arduino abstractions with get/set names to make it more clear.

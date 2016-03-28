@@ -1,4 +1,4 @@
-#N canvas 173 179 749 465 10;
+#N canvas 171 176 749 465 10;
 #X text 29 325 perspec <left> <right> <bottom> <top> <front> <back>::
 ;
 #X msg 229 279 dimen \$1 \$2;
@@ -94,6 +94,9 @@
 #X obj 351 51 t b b;
 #X msg 445 216 donecanvasdialog 1 -1 \$1 0 -1 1 1 140 20 0 0;
 #X text 609 -15 messages it gets;
+#X obj 31 83 gemkeyboard;
+#X obj 31 103 select 9;
+#X text 30 66 close on ESC;
 #X connect 1 0 13 0;
 #X connect 1 0 14 0;
 #X connect 2 0 58 0;
@@ -145,4 +148,6 @@
 #X connect 62 0 60 0;
 #X connect 62 1 61 0;
 #X connect 63 0 29 0;
+#X connect 65 0 66 0;
+#X connect 66 0 45 0;
 #X coords 0 -1 1 1 140 20 1 0 0;
