@@ -1,5 +1,4 @@
-#N canvas 455 106 726 471 10;
-#X declare -lib ggee;
+#N canvas 273 176 726 471 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X text 374 18 PD dsp on/off;
@@ -22,26 +21,26 @@
 -1;
 #X text 121 101 local path;
 #X text 104 45 absolute path;
-#X msg 75 64 /home/blahblah/pd/ehu_abstractions/examples/whistle.wav
-;
-#X msg 108 122 whistle.wav;
-#X msg 497 210 whistle.wav;
 #X text 486 109 plays a sound file;
 #X text 212 108 plays a sound file with many options;
 #X text 212 91 **COMPLEX SAMPLE PLAYER**;
 #X text 487 91 **SIMPLE SAMPLE PLAYER**;
+#X msg 109 122 sounds/whistle2.wav;
+#X msg 497 210 sounds/whistle2.wav;
+#X msg 75 64 /home/blahblah/pd/ehu_abstractions/sounds/whistle2.wav
+;
 #X connect 2 0 6 0;
 #X connect 2 1 6 1;
 #X connect 3 0 2 0;
 #X connect 4 0 2 1;
 #X connect 7 0 5 0;
-#X connect 8 0 17 0;
+#X connect 8 0 20 0;
 #X connect 8 0 3 0;
 #X connect 10 0 6 0;
 #X connect 10 1 6 1;
 #X connect 11 0 10 1;
 #X connect 12 0 10 2;
-#X connect 12 0 16 0;
-#X connect 15 0 10 1;
-#X connect 16 0 11 0;
-#X connect 17 0 4 0;
+#X connect 12 0 19 0;
+#X connect 19 0 11 0;
+#X connect 20 0 4 0;
+#X connect 21 0 10 1;

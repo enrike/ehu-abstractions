@@ -1,5 +1,4 @@
-#N canvas 322 119 653 418 10;
-#X declare -lib ggee;
+#N canvas 320 116 653 418 10;
 #X obj 84 35 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 21 87 route addObject removeObject updateObject;
@@ -28,7 +27,7 @@ object to x=width \, y=height and z=currentframe of a simple video
 #X obj 257 171 * 600;
 #X obj 36 60 print TUIO;
 #X obj 231 326 ehu/gem/texture 0 0 800 600;
-#X obj 182 236 ehu/gem/video whistle.mp4;
+#X obj 182 236 ehu/gem/video videos/whistle.mp4;
 #X connect 1 0 11 0;
 #X connect 1 1 12 0;
 #X connect 1 2 4 0;

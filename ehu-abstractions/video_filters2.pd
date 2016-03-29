@@ -1,12 +1,8 @@
-#N canvas 726 142 609 538 10;
-#X declare -lib ggee;
-#X declare -lib ggee;
-#X declare -lib ggee;
-#X declare -lib ggee;
+#N canvas 329 129 609 538 10;
 #X obj 29 242 cnv 15 500 60 empty empty empty 20 12 0 14 -162280 -66577
 0;
 #X obj 222 89 tgl 15 0 empty empty play/pause 17 7 0 10 -262144 -1
--1 1 1;
+-1 0 1;
 #X obj 222 21 bng 35 250 50 0 empty empty click_me 40 10 0 10 -258079
 -1 -1;
 #X obj 28 316 cnv 15 180 180 empty empty empty 20 12 0 14 -260097 -66577
@@ -14,7 +10,7 @@
 #X text 36 317 effects : - last outlet sends the video info out - last
 inlet takes the data back in when filter toogle is ON;
 #X obj 93 438 hsl 100 15 0 1 0 0 empty empty fade -2 -6 0 8 -4034 -1
--1 4000 1;
+-1 4950 1;
 #X floatatom 90 456 5 0 0 0 - - -;
 #X obj 39 473 pix_mix 0;
 #X obj 39 400 pix_contrast;
@@ -33,13 +29,13 @@ inlet takes the data back in when filter toogle is ON;
 #X text 53 492 and now back to render;
 #X text 26 -5 * fiddle around with the values in the effects in the
 orange area;
-#X obj 38 139 ehu/gem/video whistle.mp4;
 #X obj 350 140 ehu/gem/video whistle.mp4;
 #X obj 357 104 delay 100;
 #X obj 231 356 loadbang;
 #X msg 231 378 0.5;
-#X connect 1 0 21 1;
-#X connect 1 0 22 0;
+#X obj 38 139 ehu/gem/video videos/whistle.mp4;
+#X connect 1 0 21 0;
+#X connect 1 0 25 1;
 #X connect 2 0 1 0;
 #X connect 2 0 11 0;
 #X connect 5 0 6 0;
@@ -52,7 +48,7 @@ orange area;
 #X connect 13 0 8 0;
 #X connect 14 0 15 0;
 #X connect 15 0 7 1;
-#X connect 21 0 14 0;
-#X connect 22 0 12 0;
-#X connect 24 0 25 0;
-#X connect 25 0 5 0;
+#X connect 21 0 12 0;
+#X connect 23 0 24 0;
+#X connect 24 0 5 0;
+#X connect 25 0 14 0;

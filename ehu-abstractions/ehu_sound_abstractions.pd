@@ -1,5 +1,4 @@
-#N canvas 181 49 1009 717 10;
-#X declare -lib ggee;
+#N canvas 7 49 1009 717 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X declare -lib ggee;
@@ -50,13 +49,11 @@ and loaded;
 #X obj 330 -32 ehu/abs_path;
 #X obj 697 337 ehu/foldover~;
 #X obj 700 188 ehu/limiter~;
-#X text 439 -53 RIGHT CLICK > HELP to open help patches for each abstraction
+#X text 455 -50 RIGHT CLICK > HELP to open help patches for each abstraction
 ;
 #X text 807 274 just a distortion;
 #X text 818 369 kind of distortion;
 #X obj 696 255 ehu/distortion~;
-#X msg 330 -51 whistle.wav;
-#X msg 356 191 whistle.wav;
 #X obj 708 100 ehu/adsr~;
 #X text 695 509 records input to a stereo file;
 #X text 450 223 basic play of a sound file;
@@ -65,6 +62,8 @@ and loaded;
 #X text 819 386 wraps foldover~;
 #X text -15 465 wraps freeverb~;
 #X text -15 452 a reverb;
+#X msg 356 191 sounds/whistle.wav;
+#X msg 330 -51 sounds/whistle.wav;
 #X connect 0 0 15 0;
 #X connect 0 1 15 1;
 #X connect 13 0 18 0;
@@ -83,5 +82,5 @@ and loaded;
 #X connect 26 0 25 0;
 #X connect 31 0 25 1;
 #X connect 32 0 24 1;
-#X connect 39 0 32 0;
-#X connect 40 0 31 0;
+#X connect 47 0 31 0;
+#X connect 48 0 32 0;
