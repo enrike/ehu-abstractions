@@ -49,7 +49,7 @@ http://puredata.org/Members/hans
 : Abstractions included in EHU : (check help files and examples included for further details)
 
 + graphics/video (GEM based) :
-ehu/gem/win : opens/closes the GEM graphics window
+ehu/gem/win : opens/closes the GEM graphics window (it closes on ESC pressed)
 ehu/gem/mouse : reports the mouse coordinates and click down/up events for all mouse buttons
 ehu/gem/video : reads a video file (including audio channel which must be exported as WAV, check the help file)
 ehu/gem/picture : reads an still image (TIFF, JPG, PNG), allows alpha 
