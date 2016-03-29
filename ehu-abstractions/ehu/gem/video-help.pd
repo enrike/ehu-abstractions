@@ -1,4 +1,4 @@
-#N canvas 217 186 714 376 10;
+#N canvas 215 183 714 376 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 26 144 cnv 15 330 110 empty empty empty 20 12 0 14 -4034 -66577
@@ -36,28 +36,28 @@ parameters;
 #X text 350 64 ** for the sound to work you need to extract the audio
 from the video into a wav file next to the video file and with the
 same name as the video but with .wav extension;
-#X msg 103 68 ../../examples/whistle.mp4;
-#X obj 49 155 ehu/gem/video ../../examples/whistle.mp4 30;
 #X text 349 10 ehu/video help file;
 #X text 327 146 init arguments are : path to video file \, video FPS
 rate (defaults to 30) \, video length (in frames);
-#X connect 3 0 23 0;
-#X connect 4 0 23 1;
-#X connect 5 0 23 3;
-#X connect 6 0 23 5;
-#X connect 7 0 23 6;
-#X connect 8 0 23 7;
-#X connect 10 0 23 4;
+#X obj 49 155 ehu/gem/video ../../videos/whistle.mp4 30;
+#X msg 103 68 ../../videos/whistle.mp4;
+#X connect 3 0 24 0;
+#X connect 4 0 24 1;
+#X connect 5 0 24 3;
+#X connect 6 0 24 5;
+#X connect 7 0 24 6;
+#X connect 8 0 24 7;
+#X connect 10 0 24 4;
 #X connect 19 0 1 0;
 #X connect 19 0 18 0;
 #X connect 19 0 3 0;
 #X connect 19 0 4 0;
-#X connect 22 0 23 2;
-#X connect 23 0 2 0;
-#X connect 23 1 13 0;
-#X connect 23 2 14 0;
-#X connect 23 3 15 0;
-#X connect 23 4 16 0;
-#X connect 23 5 17 0;
-#X connect 23 6 12 0;
-#X connect 23 7 12 1;
+#X connect 24 0 2 0;
+#X connect 24 1 13 0;
+#X connect 24 2 14 0;
+#X connect 24 3 15 0;
+#X connect 24 4 16 0;
+#X connect 24 5 17 0;
+#X connect 24 6 12 0;
+#X connect 24 7 12 1;
+#X connect 25 0 24 2;
