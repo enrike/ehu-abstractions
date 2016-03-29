@@ -1,4 +1,4 @@
-#N canvas 131 158 526 415 10;
+#N canvas 129 155 526 415 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 27 298 ehu/splayer~;
@@ -18,19 +18,19 @@
 #X text 146 130 detect hits in sound in;
 #X text 315 94 filter low level hits;
 #X text 363 19 run this on startup;
-#X msg 289 94 300;
 #X text 161 215 get rand file from "sounds" folder;
+#X msg 289 94 100;
 #X connect 0 0 1 0;
 #X connect 0 1 1 1;
 #X connect 3 0 5 0;
 #X connect 3 1 5 0;
 #X connect 4 0 2 0;
 #X connect 4 0 9 0;
-#X connect 4 0 16 0;
+#X connect 4 0 17 0;
 #X connect 5 0 12 0;
 #X connect 6 0 8 0;
 #X connect 6 1 0 1;
 #X connect 8 0 0 0;
 #X connect 9 0 0 2;
 #X connect 12 0 6 0;
-#X connect 16 0 5 5;
+#X connect 17 0 5 5;

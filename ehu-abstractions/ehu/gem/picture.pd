@@ -1,4 +1,4 @@
-#N canvas 134 210 505 451 10;
+#N canvas 114 180 505 451 10;
 #X declare -lib ggee;
 #X msg -82 140 open \$1;
 #X obj 23 -73 inlet;

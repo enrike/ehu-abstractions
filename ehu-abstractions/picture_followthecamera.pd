@@ -1,16 +1,18 @@
-#N canvas 298 193 378 341 10;
-#X obj 9 -30 bng 35 250 50 0 empty empty click_me 40 10 0 10 -258079
+#N canvas 296 190 401 357 10;
+#X declare -lib ggee;
+#X obj 14 -30 bng 35 250 50 0 empty empty click_me 40 10 0 10 -258079
 -1 -1;
-#X obj 224 173 nbx 5 25 -1e+37 1e+37 0 0 empty empty x_position 0 -10
+#X obj 222 173 nbx 5 25 -1e+37 1e+37 0 0 empty empty x_position 0 -10
 0 10 -4032 -1 -1 0 256;
-#X obj 299 174 nbx 5 25 -1e+37 1e+37 0 0 empty empty y_position 0 -10
+#X obj 306 174 nbx 5 25 -1e+37 1e+37 0 0 empty empty y_position 0 -10
 0 10 -4032 -1 -1 0 256;
-#X msg 13 66 set 3;
-#X obj 30 16 ehu/gem/win 640 450;
-#X obj 215 78 ehu/gem/track;
-#X obj 33 219 ehu/gem/texture 200 200 200 150;
-#X obj 215 22 ehu/gem/cam 0;
+#X msg 14 66 set 3;
+#X obj 31 16 ehu/gem/win 640 450;
+#X obj 222 78 ehu/gem/track;
+#X obj 117 223 ehu/gem/texture 200 200 200 150;
+#X obj 222 22 ehu/gem/cam 0;
 #X obj 14 97 ehu/gem/picture picts/alpha.tif;
+#X text 55 65 above the cam;
 #X connect 0 0 3 0;
 #X connect 0 0 4 0;
 #X connect 1 0 6 2;

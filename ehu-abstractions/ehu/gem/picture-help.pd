@@ -1,33 +1,30 @@
-#N canvas 364 110 615 392 10;
-#X declare -lib ggee;
+#N canvas 358 101 630 356 10;
 #X declare -lib ggee;
 #X obj 6 74 cnv 15 380 180 empty empty empty 20 12 0 14 -4034 -66577
 0;
-#X obj 73 220 pix_contrast;
-#X floatatom 107 187 5 0 10 2 contrast - -;
-#X floatatom 142 196 5 0 0 2 saturation - -;
+#X obj 19 220 pix_contrast;
+#X floatatom 53 187 5 0 10 2 contrast - -;
+#X floatatom 88 196 5 0 0 2 saturation - -;
 #X obj 28 3 bng 35 250 50 0 empty empty click_me 40 10 0 10 -258079
 -1 -1;
-#X text 335 16 static image patch help;
-#X obj 217 108 cnv 15 380 115 empty empty empty 20 12 0 14 -233017
+#X text 282 3 static image patch help;
+#X obj 263 107 cnv 15 380 115 empty empty empty 20 12 0 14 -233017
 -66577 0;
-#X text 226 115 init arguments are : filename \, xloc \, yloc \, width
+#X text 265 115 init arguments are : filename \, xloc \, yloc \, width
 \, height;
-#X text 227 130 outlets are : image data send outlet;
-#X text 279 78 file with alpha chanel;
-#X obj 134 28 ehu/gem/win 640 450;
-#X obj 18 107 ehu/gem/picture imagen1.jpg;
-#X text 222 185 ** Note : for transparency use TIFF image with alpha
+#X text 266 130 outlets are : image data send outlet;
+#X text 350 78 file with alpha chanel;
+#X obj 28 43 ehu/gem/win 640 450;
+#X text 261 185 ** Note : for transparency use TIFF image with alpha
 chanel;
-#X obj 65 263 ehu/gem/texture 100 100 240 200;
-#X text 226 158 inlets are : 1 render on off \, 2 import this file
+#X text 265 158 inlets are : 1 render on off \, 2 import this file
 ;
-#X obj 441 298 ehu/abs_path;
-#X text 353 297 very useful >;
-#X msg 179 81 picts/alpha.tif;
-#X connect 1 0 13 0;
+#X msg 250 81 picts/alpha.tif;
+#X obj 19 107 ehu/gem/picture ../../picts/imagen1.jpg;
+#X obj 19 258 ehu/gem/texture 200 200 240 200;
+#X connect 1 0 15 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 2;
 #X connect 4 0 10 0;
-#X connect 11 0 1 0;
-#X connect 17 0 11 1;
+#X connect 13 0 14 1;
+#X connect 14 0 1 0;

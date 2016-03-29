@@ -1,4 +1,4 @@
-#N canvas 121 59 1009 717 10;
+#N canvas 110 50 803 716 10;
 #X text 4 201 inserts alpha;
 #X text 123 252 4 to use alpha;
 #X obj 141 202 / 100;
@@ -93,9 +93,10 @@
 #X obj -80 397 pix_texture;
 #X obj -80 357 separator;
 #X obj -80 377 pix_separator;
-#X obj -80 417 translateXYZ 160 110 0;
 #X text -82 312 actual cam img;
 #X text 545 29 text;
+#X obj -80 416 translateXYZ 160 110 1;
+#X text 61 412 z top most;
 #X connect 2 0 21 1;
 #X connect 3 0 43 0;
 #X connect 3 0 88 0;
@@ -183,8 +184,8 @@
 #X connect 86 0 78 0;
 #X connect 87 0 78 0;
 #X connect 88 0 91 0;
-#X connect 90 0 93 0;
+#X connect 90 0 95 0;
 #X connect 91 0 92 0;
 #X connect 92 0 90 0;
-#X connect 93 0 89 0;
+#X connect 95 0 89 0;
 #X coords 0 -1 1 1 97 72 1 100 100;

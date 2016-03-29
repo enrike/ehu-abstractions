@@ -1,10 +1,12 @@
-#N canvas 399 384 615 361 10;
+#N canvas 361 380 649 351 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 210 122 ehu/abs_path;
 #X obj 210 90 ehu/loop_list;
-#X obj 210 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 210 42 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
-#X obj 305 266 ehu/list_folder;
+#X obj 290 231 ehu/list_folder;
 #X obj 51 219 ehu/gem/texture 200 150 200 200;
 #X obj 210 63 metro 1000;
 #X obj 210 -15 bng 40 250 50 0 empty empty empty 17 7 0 50 -258113
@@ -12,17 +14,17 @@
 #X text 314 36 list of images to cycle;
 #X text 294 118 in this case they are in the same folder as this example
 file;
-#X text 303 229 you could also use this to loop all files in a subfolder
+#X text 286 209 you could also use this to loop all files in a subfolder
 ;
 #X obj 12 76 ehu/gem/win 400 300;
-#X obj 51 161 ehu/gem/picture picts/imagen1.jpg;
 #X msg 318 58 picts/imagen1.jpg picts/imagen1_320x240.jpg;
-#X connect 0 0 11 1;
+#X obj 51 161 ehu/gem/picture;
+#X connect 0 0 12 1;
 #X connect 1 0 0 0;
 #X connect 2 0 5 0;
 #X connect 5 0 1 0;
 #X connect 6 0 2 0;
-#X connect 6 0 12 0;
+#X connect 6 0 11 0;
 #X connect 6 0 10 0;
-#X connect 11 0 4 0;
-#X connect 12 0 1 1;
+#X connect 11 0 1 1;
+#X connect 12 0 4 0;

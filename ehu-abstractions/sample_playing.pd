@@ -1,46 +1,46 @@
-#N canvas 273 176 726 471 10;
+#N canvas 271 173 726 471 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
-#X text 374 18 PD dsp on/off;
-#X obj 442 156 cnv 15 250 150 empty empty empty 20 12 0 14 -233017
+#X declare -lib ggee;
+#X text 414 35 PD dsp on/off;
+#X obj 440 141 cnv 15 250 150 empty empty empty 20 12 0 14 -233017
 -66577 0;
 #X obj 474 266 ehu/splayer~;
-#X obj 473 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 474 193 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
 1;
 #X obj 497 229 ehu/abs_path;
-#X obj 297 17 ehu/dsp;
+#X obj 337 34 ehu/dsp;
 #X obj 298 388 ehu/out~;
-#X obj 297 -7 loadbang;
-#X obj 618 160 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113
+#X obj 337 10 loadbang;
+#X obj 497 150 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
-#X obj 9 144 cnv 15 250 200 empty empty empty 20 12 0 14 -233017 -66577
+#X obj 20 166 cnv 15 250 200 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 65 180 ehu/splayer2~;
 #X obj 108 141 ehu/abs_path;
-#X obj 85 -10 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113 -1
+#X obj 85 -6 bng 35 250 50 0 empty empty empty 17 7 0 10 -258113 -1
 -1;
-#X text 121 101 local path;
-#X text 104 45 absolute path;
-#X text 486 109 plays a sound file;
-#X text 212 108 plays a sound file with many options;
-#X text 212 91 **COMPLEX SAMPLE PLAYER**;
-#X text 487 91 **SIMPLE SAMPLE PLAYER**;
+#X text 116 101 local path;
+#X text 473 102 plays a sound file;
+#X text 53 73 plays a sound file with many options;
+#X text 52 55 **COMPLEX SAMPLE PLAYER**;
+#X text 471 86 **SIMPLE SAMPLE PLAYER**;
 #X msg 109 122 sounds/whistle2.wav;
 #X msg 497 210 sounds/whistle2.wav;
-#X msg 75 64 /home/blahblah/pd/ehu_abstractions/sounds/whistle2.wav
-;
+#X obj 85 123 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
 #X connect 2 0 6 0;
 #X connect 2 1 6 1;
 #X connect 3 0 2 0;
 #X connect 4 0 2 1;
 #X connect 7 0 5 0;
-#X connect 8 0 20 0;
+#X connect 8 0 19 0;
 #X connect 8 0 3 0;
 #X connect 10 0 6 0;
 #X connect 10 1 6 1;
 #X connect 11 0 10 1;
-#X connect 12 0 10 2;
-#X connect 12 0 19 0;
-#X connect 19 0 11 0;
-#X connect 20 0 4 0;
-#X connect 21 0 10 1;
+#X connect 12 0 18 0;
+#X connect 12 0 20 0;
+#X connect 18 0 11 0;
+#X connect 19 0 4 0;
+#X connect 20 0 10 2;
