@@ -1,4 +1,4 @@
-#N canvas 407 167 542 485 10;
+#N canvas 405 164 542 485 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X obj 27 373 ehu/splayer~;
@@ -6,7 +6,7 @@
 #X obj 423 56 ehu/dsp;
 #X obj 26 29 ehu/in~;
 #X obj 423 30 loadbang;
-#X obj 27 90 ehu/hit_sensor;
+#X obj 27 115 ehu/hit_sensor;
 #X obj 27 327 t b s;
 #X text 111 373 load and play it;
 #X msg 27 349 1;
@@ -14,7 +14,7 @@
 #X text 287 334 no loop;
 #X text 27 0 plays a random sound file from a folder on hit detected
 ;
-#X text 42 194 detect hits in sound in;
+#X text 42 219 detect hits in sound in;
 #X text 381 86 filter low level hits;
 #X text 429 11 run this on startup;
 #X obj 27 293 ehu/loop_list;

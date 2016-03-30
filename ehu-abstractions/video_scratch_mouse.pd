@@ -1,13 +1,15 @@
-#N canvas 436 323 484 348 10;
-#X obj 18 -1 bng 30 250 50 0 empty empty empty 17 7 0 10 -250685 -1
+#N canvas 434 320 493 264 10;
+#X declare -lib ggee;
+#X declare -lib ggee;
+#X obj 18 14 bng 30 250 50 0 empty empty empty 17 7 0 10 -250685 -1
 -1;
 #X text 98 10 * move Y loc of mouse on the graphics window to scratch
 the video;
-#X obj 173 64 autoscale 0 100;
-#X obj 18 45 ehu/gem/win 640 480;
-#X obj 176 35 ehu/gem/mouse;
-#X obj 28 218 ehu/gem/texture 320 240 649 480;
-#X obj 25 100 ehu/gem/video videos/whistle.mp4;
+#X obj 222 64 autoscale 0 100;
+#X obj 18 53 ehu/gem/win 640 480;
+#X obj 212 35 ehu/gem/mouse;
+#X obj 75 161 ehu/gem/texture 320 240 649 480;
+#X obj 75 100 ehu/gem/video videos/whistle.mp4;
 #X connect 0 0 3 0;
 #X connect 2 0 6 5;
 #X connect 4 1 2 0;
