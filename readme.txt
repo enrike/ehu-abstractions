@@ -227,10 +227,10 @@ plot has now a zoom control
 --- To do ---
 
 - timed_bang : on/off, fix loop 
-- cuadrante
 - video does not bang on loop when go_to
 - fix bypass in picture object. should go back to original image when bypass goes off
 - movement2 objet, pix_blob abs for color track
+- change reg point of graphical objects to top/left
 
 
 
