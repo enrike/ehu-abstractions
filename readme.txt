@@ -1,15 +1,13 @@
-ehu 0.7.5 -  03/2016 by www.ixi audio.net
+ehu 0.8 -  04/2016 by www.ixi audio.net
 
 https://github.com/enrike/ehu-abstractions
 
 
 --- Description ---
 EHU is a set of abstractions for PureData real-time graphical programming environment (http://www.puredata.org , http://en.wikipedia.org/wiki/Puredata). 
-EHU encapsulates the complexity of programming PureData to allow for rapid prototyping of interactive systems. 
-The main purpose of EHU is control/manipulate/analise/sequence video and audio in real-time and provide a set of utilities. 
-EHU is developed for people with basic knowledge of PD, but also for more advanced users, to ease and speed up as much as possible the development. Most abstractions encapsulate the GUI elements to control, this is to minimise the creation of elements and connections.
-EHU also includes abstractions to control Arduino (http://www.arduino.cc) from PD (wraps pduino example by Gerda Strobl and Georg Holtzmann). 
-Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, playing samples, audio effects, plus some general utilities.
+EHU aims to allow for rapid prototyping of interactive systems. 
+Most abstractions provided encapsulate the GUI elements to control them, this is to minimise the creation of elements and connections.
+Main areas covered by EHU abstractions are : playing video files, controlling video cameras, displaying pictures, playing samples, audio effects, DMX controls, and some general utilities.
 
 
 -- Contact --
@@ -18,7 +16,7 @@ info@ixi-audio.net any type of feedback and/or contributions are welcome
 
 -- HOW TO INSTALL THIS LIBRARY? --
 Like any other PD library http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
-Or you can just keep the ehu folder next to your patches. For instance move the ehu folder into the examples folder and you should be able to run the patches in the examples folder.
+You can also just keep the ehu folder next to your patches
 
 
 --- License --- GPL
@@ -32,18 +30,14 @@ You should have received a copy of the GNU General Public License along with thi
 The pduino abstractions (port, analog_input, analog_output, digital_input digital_output_pwm,  set_input, digital_IO_mode) are based on code taken from arduino-help.pd example by Gerda Strobl and Georg Holtzmann licensed with GNU GPL
 
 
-
-
 --- System requirements ---
-ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. However you might need to install manually Pduino (arduino) 
+ehu is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. You might need to install manually Pduino (arduino) 
 
 - Download the extended version of PD from
 http://puredata.org/downloads 
-http://puredata.org/Members/hans
+http://puredata.info/downloads/pd-extended
 
-- Pduino can be downloaded from http://at.or.at/hans/pd/objects.html you just need to copy the arduino.pd file into the extra folder inside pd. 
-
-
+- Pduino can be downloaded from http://at.or.at/hans/pd/objects.html you just need to copy the arduino.pd file into the extra folder inside PD. 
 
 
 : Abstractions included in EHU : (check help files and examples included for further details)
@@ -71,7 +65,7 @@ ehu/timed_bang : given a list of times (in milliseconds) it outputs bangs on tim
 ehu/timed_spigot : allows incomming values to pass through only every N milliseconds
 ehu/follow : follows values with delay. Eases discontinuities in streams of numbers
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
-ehu/envelope : just wraps envgen adding some controls. outputs an envelope line. It is mainly used to control the envelope of a sound but also any other value (for eg. control the xloc of a video).
+ehu/envelope : just wraps envgen adding some controls. it works as a kind of timeline sequencing object.
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
 
 + audio abstractions :
@@ -163,7 +157,8 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
-0.7.5 04/2016
+0.8 04/2016
+changed folder structure to keep the ehu folder under the examples
 several fixess all over, updated docs and examples, added list_folder, added experimental DMX controls
 
 0.7.4 12/2013
@@ -231,8 +226,7 @@ plot has now a zoom control
 
 --- To do ---
 
-- timed_bang : on/of, fix loop 
-- video recorder
+- timed_bang : on/off, fix loop 
 - cuadrante
 - video does not bang on loop when go_to
 - fix bypass in picture object. should go back to original image when bypass goes off
