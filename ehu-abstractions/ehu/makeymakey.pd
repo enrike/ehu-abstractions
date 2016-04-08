@@ -1,8 +1,8 @@
-#N canvas 145 92 880 461 10;
-#X obj 103 134 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -10 0
-10 -261241 -1 -1 127 256;
-#X obj 103 117 nbx 4 15 -1e+37 1e+37 0 0 empty empty empty 0 -10 0
-10 -4032 -1 -1 397 256;
+#N canvas 308 96 880 461 10;
+#X obj 103 134 nbx 4 15 -1e+037 1e+037 0 0 empty empty empty 0 -10
+0 10 -261241 -1 -1 294 256;
+#X obj 103 117 nbx 4 15 -1e+037 1e+037 0 0 empty empty empty 0 -10
+0 10 -4032 -1 -1 382 256;
 #X obj 169 118 bng 14 250 50 0 empty empty empty 0 -6 0 10 -257985
 -1 -1;
 #X obj 153 118 bng 14 250 50 0 empty empty empty 0 -6 0 10 -4034 -1
@@ -33,10 +33,9 @@
 #X obj 616 413 outlet;
 #X obj 660 413 outlet;
 #X obj 704 412 outlet;
-#X obj 402 82 select 111 116 113 114 25 38 39 40 41 65;
-#X msg 649 135 set space;
-#X obj 752 413 outlet;
-#X text 426 17 up 111 down 116 left 113 right 114 w 25 a 38 s 39 d
+#X msg 719 174 set space;
+#X obj 794 412 outlet;
+#X text 407 -1 up 111 down 116 left 113 right 114 w 25 a 38 s 39 d
 40 f 41 space 65;
 #X obj 169 135 bng 14 250 50 0 empty empty empty 0 -6 0 10 -257985
 -1 -1;
@@ -44,6 +43,16 @@
 -1;
 #X obj 255 415 outlet;
 #X obj 211 414 outlet;
+#X obj 648 105 symbol;
+#X obj 486 62 print;
+#X text 407 24 up 38 down 40 left 37 right 39 w 87 a 65 s 83 d 68 f
+70 g 71 space 32;
+#X text 352 27 new;
+#X text 339 2 old bad?;
+#X obj 541 52 select 111 116 113 114 25 38 39 40 41 65;
+#X obj 402 82 select 38 40 37 39 87 65 83 68 70 71 32;
+#X msg 671 168 set g;
+#X obj 748 414 outlet;
 #X connect 0 0 18 0;
 #X connect 1 0 17 0;
 #X connect 2 0 19 0;
@@ -52,9 +61,10 @@
 #X connect 5 1 0 0;
 #X connect 5 2 3 0;
 #X connect 5 3 2 0;
-#X connect 5 6 35 0;
-#X connect 5 7 34 0;
-#X connect 6 0 30 0;
+#X connect 5 6 34 0;
+#X connect 5 7 33 0;
+#X connect 6 0 38 0;
+#X connect 6 0 43 0;
 #X connect 8 0 7 0;
 #X connect 9 0 7 0;
 #X connect 10 0 7 0;
@@ -64,28 +74,32 @@
 #X connect 14 0 7 0;
 #X connect 15 0 7 0;
 #X connect 16 0 7 0;
-#X connect 30 0 16 0;
-#X connect 30 0 21 0;
-#X connect 30 1 15 0;
-#X connect 30 1 22 0;
-#X connect 30 2 14 0;
-#X connect 30 2 23 0;
-#X connect 30 3 13 0;
-#X connect 30 3 24 0;
-#X connect 30 4 8 0;
-#X connect 30 4 25 0;
-#X connect 30 5 9 0;
-#X connect 30 5 26 0;
-#X connect 30 6 10 0;
-#X connect 30 6 27 0;
-#X connect 30 7 11 0;
-#X connect 30 7 28 0;
-#X connect 30 8 12 0;
-#X connect 30 8 29 0;
-#X connect 30 9 31 0;
-#X connect 30 10 7 0;
-#X connect 31 0 7 0;
-#X connect 31 0 32 0;
+#X connect 30 0 7 0;
+#X connect 33 0 35 0;
 #X connect 34 0 36 0;
-#X connect 35 0 37 0;
+#X connect 37 0 7 0;
+#X connect 43 0 16 0;
+#X connect 43 0 21 0;
+#X connect 43 1 15 0;
+#X connect 43 1 22 0;
+#X connect 43 2 14 0;
+#X connect 43 2 23 0;
+#X connect 43 3 13 0;
+#X connect 43 3 24 0;
+#X connect 43 4 8 0;
+#X connect 43 4 25 0;
+#X connect 43 5 9 0;
+#X connect 43 5 26 0;
+#X connect 43 6 10 0;
+#X connect 43 6 27 0;
+#X connect 43 7 11 0;
+#X connect 43 7 28 0;
+#X connect 43 8 12 0;
+#X connect 43 8 29 0;
+#X connect 43 9 44 0;
+#X connect 43 9 45 0;
+#X connect 43 10 30 0;
+#X connect 43 10 31 0;
+#X connect 43 11 37 0;
+#X connect 44 0 7 0;
 #X coords 0 -1 1 1 130 53 1 100 100;
