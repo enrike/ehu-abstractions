@@ -230,6 +230,11 @@ plot has now a zoom control
 
 --- To do ---
 
+list_folder does not work properly with abs_path
+delete makeymakey object, the gemkeyboard codes are totally non crossplatform
+win object ESC key window close does not work fine because keycodes are not consistent
+add scale_rect object
+
 - timed_bang : on/off, fix loop 
 - video does not bang on loop when go_to
 - fix bypass in picture object. should go back to original image when bypass goes off
