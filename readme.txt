@@ -230,14 +230,13 @@ plot has now a zoom control
 
 --- To do ---
 
-list_folder does not work properly with abs_path
-delete makeymakey object, the gemkeyboard codes are totally non crossplatform
-win object ESC key window close does not work fine because keycodes are not consistent
-add scale_rect object
+- list_folder does not work properly with abs_path
+- delete makeymakey object, the gemkeyboard codes are totally non crossplatform. better use gemkeyboard and mouse object directly
+- win object ESC key window close does not work fine because keycodes are not crossplatform
+- videos if stop on N frame then sent to M frame, thenplayed again they show frame N for a short time before moving into M
 
 - timed_bang : on/off, fix loop 
 - video does not bang on loop when go_to
-- fix bypass in picture object. should go back to original image when bypass goes off
 - movement2 objet, pix_blob abs for color track
 - change reg point of graphical objects to top/left or top/down
 
