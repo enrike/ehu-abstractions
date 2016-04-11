@@ -231,9 +231,10 @@ plot has now a zoom control
 --- To do ---
 
 - list_folder does not work properly with abs_path
+- object that checks if all items in a list are equal?
 - delete makeymakey object, the gemkeyboard codes are totally non crossplatform. better use gemkeyboard and mouse object directly
 - win object ESC key window close does not work fine because keycodes are not crossplatform
-- videos if stop on N frame then sent to M frame, thenplayed again they show frame N for a short time before moving into M
+- videos if stop on N frame then sent to M frame and then played again, they show frame N for a short time before moving into M
 
 - timed_bang : on/off, fix loop 
 - video does not bang on loop when go_to
