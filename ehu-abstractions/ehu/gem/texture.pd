@@ -1,4 +1,4 @@
-#N canvas 61 100 654 426 10;
+#N canvas 374 95 654 426 10;
 #X obj 21 -60 inlet;
 #X obj 58 -60 inlet;
 #X obj 135 -60 inlet;
@@ -7,15 +7,15 @@
 #X obj -107 269 rectangle 150 100;
 #X obj 2 18 cnv 15 172 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
-#X floatatom 30 32 5 0 0 2 xloc - -;
-#X floatatom 65 32 5 0 0 2 yloc - -;
-#X floatatom 100 32 5 0 0 2 width - -;
-#X floatatom 135 32 5 0 0 2 height - -;
+#X floatatom 30 32 5 0 0 2 xloc - -, f 5;
+#X floatatom 65 32 5 0 0 2 yloc - -, f 5;
+#X floatatom 100 32 5 0 0 2 width - -, f 5;
+#X floatatom 135 32 5 0 0 2 height - -, f 5;
 #X obj 67 -114 loadbang;
-#X floatatom 30 61 3 0 100 2 R - -;
-#X floatatom 53 61 3 0 100 2 G - -;
-#X floatatom 76 61 3 0 100 2 B - -;
-#X floatatom 135 61 5 0 0 2 rotation - -;
+#X floatatom 30 61 3 0 100 2 R - -, f 3;
+#X floatatom 53 61 3 0 100 2 G - -, f 3;
+#X floatatom 76 61 3 0 100 2 B - -, f 3;
+#X floatatom 135 61 5 0 0 2 rotation - -, f 5;
 #X obj -107 181 rotateXYZ;
 #X obj 85 181 f;
 #X obj 178 -60 inlet;
@@ -56,7 +56,7 @@
 #X obj -107 88 pix_separator;
 #X obj -107 225 color 1 1 1 0;
 #X obj -107 247 alpha;
-#X floatatom 99 60 3 0 100 2 A - -;
+#X floatatom 99 60 3 0 100 2 A - -, f 3;
 #X obj 196 117 * 0.01;
 #X obj 142 140 t b f;
 #X obj 92 139 t b f;
@@ -66,11 +66,13 @@
 #X text 256 -77 R G B A;
 #X obj -8 247 * 0.5;
 #X obj -58 247 * 0.5;
+#X obj -107 323 outlet;
 #X connect 0 0 19 0;
 #X connect 1 0 20 0;
 #X connect 2 0 22 0;
 #X connect 3 0 21 0;
 #X connect 4 0 16 0;
+#X connect 5 0 65 0;
 #X connect 7 0 4 1;
 #X connect 8 0 4 2;
 #X connect 9 0 64 0;

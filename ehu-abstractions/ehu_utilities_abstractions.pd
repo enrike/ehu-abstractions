@@ -1,4 +1,4 @@
-#N canvas 313 52 635 609 10;
+#N canvas 21 57 657 700 10;
 #X declare -lib ggee;
 #X declare -lib ggee;
 #X declare -lib ggee;
@@ -35,3 +35,7 @@ path;
 #X obj 31 567 ehu/list_folder;
 #X text 144 563 returns a list with all the absolute paths of the files
 in the given folder;
+#X obj 29 619 ehu/point_in_rect;
+#X text 163 616 checks for intersection between point and rect;
+#X obj 29 654 ehu/vdelay;
+#X text 161 651 delays a number;

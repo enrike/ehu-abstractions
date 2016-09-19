@@ -1,5 +1,4 @@
-#N canvas 114 180 505 451 10;
-#X declare -lib ggee;
+#N canvas 394 267 505 451 10;
 #X msg -82 140 open \$1;
 #X obj 23 -73 inlet;
 #X obj -26 320 outlet;
@@ -9,9 +8,9 @@
 #X obj 3 18 cnv 15 95 30 empty empty empty 20 12 0 14 -233017 -66577
 0;
 #X obj 5 29 tgl 15 0 empty empty on 0 -6 0 7 -262144 -1 -1 1 1;
-#X obj 89 -56 delay 1000;
-#X obj 89 -82 loadbang;
-#X obj 23 -27 symbol \$1;
+#X obj 129 -56 delay 1000;
+#X obj 129 -82 loadbang;
+#X obj 129 -32 symbol \$1;
 #X obj 23 29 bng 15 250 50 0 empty empty open 0 -6 0 10 -262144 -1
 -1;
 #X obj 23 57 openpanel;
@@ -29,7 +28,7 @@
 #X obj 99 243 r EHU_gop;
 #X text 164 241 w h of canvas / x y of red window;
 #X msg 99 264 donecanvasdialog 1 -1 \$1 0 -1 1 1 170 85 100 100;
-#X text 155 -56 wait a sec;
+#X text 211 -57 wait a sec;
 #X obj 5 141 print loading;
 #N canvas 448 162 450 300 dealwith 0;
 #X msg -44 51 quality \$1;
@@ -56,8 +55,9 @@
 #X connect 9 4 8 0;
 #X restore -81 -29 pd dealwith;
 #X obj -82 103 ehu/abs_path;
+#X obj 23 -52 symbol \$1;
 #X connect 0 0 13 0;
-#X connect 1 0 0 0;
+#X connect 1 0 31 0;
 #X connect 3 0 29 0;
 #X connect 5 0 21 0;
 #X connect 7 0 5 0;
@@ -80,4 +80,5 @@
 #X connect 29 2 7 0;
 #X connect 30 0 0 0;
 #X connect 30 0 28 0;
+#X connect 31 0 0 0;
 #X coords 0 -1 1 1 100 50 1 1 1;

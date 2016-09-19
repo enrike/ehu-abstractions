@@ -1,4 +1,4 @@
-ehu 0.8 -  04/2016 by www.ixi audio.net
+ehu 0.8.5 -  09/2016 by www.ixi audio.net
 
 https://github.com/enrike/ehu-abstractions
 
@@ -18,6 +18,17 @@ info@ixi-audio.net any type of feedback and/or contributions are welcome
 Like any other PD library http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
 You can also just keep the ehu folder next to your patches
 Note that it relies on several externals included in pd-extended, so if you want to use EHU within standard vanilla PD you need to install those as well.
+
+dependencies:
+GEM
+ggee /getdir
+hcs /folderlist
+cyclone/counter
+comport (Arduino and DMX abstractions)
+???/envgen (envelope)
+freeverb~ (rev~ abstraction)
+creb/dist~ (distortion~ abstraction)
+sigpack/foldover~ (foldover~ abstraction)
 
 
 --- License --- GPL
@@ -56,6 +67,7 @@ ehu/gem/rect : draws a rectangle
 ehu/gem/circle : draws a circle
 ehu/gem/text : draws a text
 
+ehu/gem/rec: records video and audio into wav and mov files
 ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
 
 
@@ -71,6 +83,8 @@ ehu/follow : follows values with delay. Eases discontinuities in streams of numb
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
 ehu/envelope : just wraps envgen adding some controls. it works as a kind of timeline sequencing object.
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
+ehu/vdelay: delays the output of a number for a given time
+ehu/point_in_rect: outputs True if point is inside of rect
 
 
 AUDIO (check ehu_sound_abstractions.pd file)
@@ -93,6 +107,7 @@ ehu/limiter~ : just wraps limiter~ in zexy library and provides a GUI
 
 ehu/pitch_sensor : analyses pitch and amplitude of sound signal (just wraps fiddle~)
 ehu/hit_sensor : detects hits (onsets) in a sound signal (just wraps bonk~)
+ehu/signal_sensor: outputs 1 when audio signal goes over a threshold, otherwise outputs 0
 
 
 ARDUINO (check ehu_arduino_abstractions.pd file)
@@ -161,6 +176,10 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
+0.85 09/2016
+added signal_sensor and gem/rec objects
+some small fixes here and there...
+
 0.8 04/2016
 changed folder structure to keep the ehu folder under the examples
 several fixess all over, updated docs and examples, added list_folder, added experimental DMX controls
