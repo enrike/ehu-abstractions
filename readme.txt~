@@ -1,16 +1,13 @@
-ehu 0.8.6 -  10/2016 by www.ixi audio.net
+ehu 0.8 -  04/2016 by www.ixi audio.net
 
 https://github.com/enrike/ehu-abstractions
 
 
 --- Description ---
 EHU is a set of abstractions for PureData real-time graphical programming environment. 
-
-EHU covers playing video files, controlling video cameras, displaying pictures, playing samples, audio effects, arduino, DMX controls, plus includes some general utilities.
-
 EHU aims to allow for rapid prototyping of interactive systems. 
-
-Most abstractions in EHU encapsulate the GUI controls minimising the job of creating widgets and connections.
+Most abstractions in EHU encapsulate the GUI widgets to control them minimising the job of creation of widgets and connections.
+EHU covers playing video files, controlling video cameras, displaying pictures, playing samples, audio effects, DMX controls, and some general utilities.
 
 
 -- Contact --
@@ -20,21 +17,7 @@ info@ixi-audio.net any type of feedback and/or contributions are welcome
 -- HOW TO INSTALL THIS LIBRARY? --
 Like any other PD library http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
 You can also just keep the ehu folder next to your patches
-Note that EHU relies on some PD externals, all of them are included in PD-Extended (no longer maintained, although it will probably work well). If you want to use EHU within standard vanilla PD you need to install those extras manually or using Deken. You can also use PD-l2ork 
-
-dependencies:
-The main dependencies are GEM (displaying graphics, cameras and video), GGEE (importing files for images, sound and video playing), HCS (some of the utilities) and cyclone (used in the video playing). This is the complete list
-
-GEM
-ggee /getdir
-ggee/envgen (envelope)
-hcs /folderlist
-cyclone/counter
-comport (Arduino and DMX abstractions)
-freeverb~ (rev~ abstraction)
-creb/dist~ (distortion~ abstraction)
-sigpack/foldover~ (foldover~ abstraction)
-zexy/limiter~ (limiter~ abstraction)
+Note that it relies on several externals included in pd-extended, so if you want to use EHU within standard vanilla PD you need to install those as well.
 
 
 --- License --- GPL
@@ -46,10 +29,20 @@ You should have received a copy of the GNU General Public License along with thi
  MA 02111-1307 USA
 
 The pduino abstractions (port, analog_input, analog_output, digital_input digital_output_pwm,  set_input, digital_IO_mode) are based on code taken from arduino-help.pd example by Gerda Strobl and Georg Holtzmann licensed with GNU GPL
-Some sound abstractions are based and use code by GuitarExtended, Pierre Massat 2012
 
 
---- List of abstractions included in EHU --- (check help files and examples included for further details)
+--- System requirements ---
+EHU is a PureData collection of abstractions that use some PD externals and abstractions. Most of them are included in PureData extended. You might need to install manually Pduino (arduino) 
+
+- Download the extended version of PD from
+http://puredata.org/downloads 
+http://puredata.info/downloads/pd-extended
+
+- Pduino can be downloaded from http://at.or.at/hans/pd/objects.html you just need to copy the arduino.pd file into the extra folder inside PD. 
+
+
+
+--- List of abstractions --- (check help files and examples included for further details)
 
 GRAPHICS (GEM based, check ehu_gem_abstractions.pd file)
 
@@ -62,9 +55,7 @@ ehu/gem/texture : renders the output of a picture, cam or video
 ehu/gem/rect : draws a rectangle 
 ehu/gem/circle : draws a circle
 ehu/gem/text : draws a text
-ehu/gem/rec: recs video and audio into hardrive (video as QT and audio as WAV)
 
-ehu/gem/rec: records video and audio into wav and mov files
 ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
 
 
@@ -80,37 +71,28 @@ ehu/follow : follows values with delay. Eases discontinuities in streams of numb
 ehu/elastic_follow : follows (elastically) values with delay. Eases discontinuities in streams of numbers
 ehu/envelope : just wraps envgen adding some controls. it works as a kind of timeline sequencing object.
 ehu/makeymakey : provides a simple abstraction that listens to events from a makeymakey device (wraps GEM mouse and keyboard)
-ehu/vdelay: delays the output of a number for a given time
-ehu/point_in_rect: outputs True if point is inside of rect
 
 
 AUDIO (check ehu_sound_abstractions.pd file)
 
 ehu/dsp : toogles Pure Data's DSP (Digital Sound Processing) on/off
 ehu/splayer~ : plays a sound sample file with some control options (pitch, loop)
-ehu/splayer2~ : plays a sound sample file with MANY control options
+ehu/splayer2~ : plays or records-and-plays a sound sample file with many control options
 ehu/out~ : stereo sound output (dac~) with volume slider/mute and number
 ehu/in~ : stereo sound input (adc~) with volume slider/mute and number
 ehu/vol~ : controls volume of a sound signal with volume slider/mute and number
 ehu/mix~ : mixes and fades two sound channels
 ehu/plot : displays the waveform of an audio signal
-ehu/rec~: records input signal into a hard drive as sound file. 
-ehu/recorder~ : 	(Better use ehu/rec~) records input signal into a hard drive as sound file (experimental)
+ehu/recorder~ : records input signal into a hard drive as sound file (experimental)
 ehu/del~ : just a basic delay
 ehu/rev~ : GUI to freeverb~ reverb object
-ehu/ring~ : (Better use ehu/tremolo~) basic ring modulation 
+ehu/ring~ : basic ring modulation
 ehu/distortion~ : just a distortion. wraps dist~ in creb library and provides a GUI
 ehu/foldover~ : just wraps foldover~ in sigpack library and provides a GUI
 ehu/limiter~ : just wraps limiter~ in zexy library and provides a GUI
-ehu/tremolo~
-ehu/phaser~
-ehu/fuzz~
-ehu/vibrato~
-ehu/autodel~
 
 ehu/pitch_sensor : analyses pitch and amplitude of sound signal (just wraps fiddle~)
 ehu/hit_sensor : detects hits (onsets) in a sound signal (just wraps bonk~)
-ehu/signal_sensor: outputs 1 when audio signal goes over a threshold, otherwise outputs 0
 
 
 ARDUINO (check ehu_arduino_abstractions.pd file)
@@ -133,7 +115,7 @@ ehu/dmx/slider
 
 
 
--- Remarks ---
+-- How to use ---
 
 The main folder is full with examples that illustrate different ways to use the abstractions. Check them out.
 
@@ -179,13 +161,6 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
-0.86 10/2016
-more abstractions added
-
-0.85 09/2016
-added signal_sensor and gem/rec objects
-some small fixes here and there...
-
 0.8 04/2016
 changed folder structure to keep the ehu folder under the examples
 several fixess all over, updated docs and examples, added list_folder, added experimental DMX controls

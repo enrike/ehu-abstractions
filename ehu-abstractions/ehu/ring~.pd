@@ -13,13 +13,13 @@
 #X obj 207 73 inlet~;
 #X obj 54 371 outlet~;
 #X obj 198 367 outlet~;
-#X floatatom 103 116 5 0 0 2 - - -;
+#X floatatom 103 116 5 0 0 2 - - -, f 5;
 #X msg 83 90 0;
-#X obj 106 149 hsl 80 12 0 1 0 0 trem_dry empty empty 4 10 0 8 -225271
+#X obj 103 149 hsl 80 12 0 1 0 0 trem_dry empty empty 4 10 0 8 -225271
 -258699 -1 0 1;
 #X obj 173 117 bng 15 250 50 0 empty empty empty 0 -6 0 10 -258113
 -1 -1;
-#X text 112 147 dry/wet;
+#X text 109 147 dry/wet;
 #X obj 353 133 tgl 15 0 empty empty empty 17 7 0 10 -260097 -1 -1 0
 1;
 #X obj 291 24 inlet;
@@ -34,9 +34,9 @@
 #X obj 330 23 inlet;
 #X obj 243 210 *~ 1;
 #X obj 104 209 *~ 1;
-#X obj 106 134 hsl 80 12 0 1 0 0 trem_dry empty empty 4 10 0 8 -225271
--258699 -1 900 1;
-#X text 112 131 amplitude;
+#X obj 103 134 hsl 80 12 0 1 0 0 trem_dry empty empty 4 10 0 8 -225271
+-258699 -1 0 1;
+#X text 109 131 amplitude;
 #X obj 197 320 *~ 1;
 #X text 136 116 freq;
 #X connect 0 0 30 0;

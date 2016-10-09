@@ -1,4 +1,4 @@
-#N canvas 10 50 1004 714 10;
+#N canvas 2 49 1004 714 10;
 #X msg 520 150 start 0;
 #X obj 684 22 inlet~;
 #X obj -19 22 inlet;
@@ -40,23 +40,23 @@
 #X obj 40 319 / 1;
 #X obj 110 211 / 44100;
 #X obj 306 323 hsl 128 15 0 1 0 0 \$0startB \$0start empty -2 -8 0
-10 -258113 -1 -1 0 0;
+10 -258113 -1 -1 6000 0;
 #X text 315 321 start;
 #X obj 306 341 hsl 128 15 0 1 0 0 \$0endB \$0end empty -2 -8 0 10 -258113
--1 -1 12700 0;
+-1 -1 7400 0;
 #X text 315 338 end;
 #X obj 91 189 t b f f;
 #X msg 91 320 0;
 #X obj 306 359 hsl 128 15 0 1 0 0 \$0gotoB \$0goto empty -2 -8 0 10
--260097 -1 -1 29 0;
+-260097 -1 -1 6523 0;
 #X text 316 357 navigate snd;
 #X obj 303 216 tgl 15 0 \$0playB \$0play empty 17 7 0 10 -258113 -1
--1 0 1;
+-1 1 1;
 #X obj 25 256 select 1;
 #X obj 303 252 nbx 4 14 -1e+37 1e+37 0 0 \$0pitchB \$0pitch empty 0
 -8 0 10 -260097 -1 -1 1 256;
 #X obj 306 305 hsl 128 15 0 1 0 0 \$0panB \$0pan empty -2 -8 0 10 -4034
--1 -1 6350 0;
+-1 -1 6000 0;
 #X text 314 302 pan;
 #X text 319 215 play/pause;
 #X obj 40 677 outlet~;
@@ -72,9 +72,9 @@
 #X text 353 250 pitch;
 #X text 405 214 load;
 #X obj 389 159 r \$0open;
-#X obj 389 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
+#X obj 381 233 bng 15 250 50 0 empty empty empty 17 7 0 10 -258113
 -1 -1;
-#X text 404 232 reset;
+#X text 398 232 reset;
 #X obj 411 183 r \$0reset;
 #X msg 311 87 0;
 #X obj 884 285 table \$0snd;
@@ -148,7 +148,7 @@
 #X obj 226 428 line~;
 #X obj 96 428 line~;
 #X obj 317 193 loadbang;
-#X floatatom 325 254 7 0 0 3 blocksize_in_ms - -;
+#X floatatom 325 254 7 0 0 3 blocksize_in_ms - -, f 7;
 #X obj 300 194 bng 15 250 50 0 empty empty empty 0 -6 0 8 -262144 -1
 -1;
 #X obj 226 347 t f b;
@@ -211,7 +211,7 @@
 #X msg 114 547 0;
 #X obj 371 269 tgl 15 0 empty \$0stereo empty 17 7 0 10 -257985 -1
 -1 1 1;
-#X text 389 267 stereo?;
+#X text 386 267 stereo?;
 #X obj 303 234 tgl 15 0 \$0loopB \$0loop empty 17 7 0 10 -258113 -1
 -1 1 1;
 #X text 319 232 loop;
@@ -304,7 +304,7 @@ set;
 #X restore 41 403 pd limits;
 #X obj 92 382 r \$0endB;
 #X obj 335 480 snapshot~;
-#X obj 335 441 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+#X obj 335 441 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 1
 1;
 #X obj 335 459 metro 70;
 #X obj -10 141 f;
