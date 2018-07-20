@@ -63,6 +63,7 @@ ehu/gem/rect : draws a rectangle
 ehu/gem/circle : draws a circle
 ehu/gem/text : draws a text
 ehu/gem/rec: recs video and audio into hardrive (video as QT and audio as WAV)
+ehu/gem/video_delay: video delay (use this instead of pix_video)
 
 ehu/gem/rec: records video and audio into wav and mov files
 ehu/gem/track : tracks movement from a video stream (ehu/cam or ehu/video)
