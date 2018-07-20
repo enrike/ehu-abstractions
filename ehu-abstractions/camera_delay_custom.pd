@@ -1,0 +1,11 @@
+#N canvas 844 50 508 319 10;
+#X floatatom 219 143 5 0 0 0 - - -, f 5;
+#X obj 66 54 ehu/gem/cam 0;
+#X obj 196 71 ehu/gem/win 300 200;
+#X obj 66 184 ehu/gem/texture 75 110 130 100;
+#X obj 259 183 ehu/gem/texture 220 110 130 100;
+#X obj 66 122 ehu/gem/video_delay 100 20;
+#X connect 1 0 5 0;
+#X connect 5 0 3 0;
+#X connect 5 1 4 0;
+#X connect 5 2 0 0;
