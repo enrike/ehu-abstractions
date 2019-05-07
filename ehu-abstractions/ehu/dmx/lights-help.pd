@@ -1,0 +1,25 @@
+#N canvas 550 257 489 384 10;
+#X text 195 101 go black in 5 secs;
+#X text 203 78 go white in 1 secs;
+#X text 206 131 full red in 10s;
+#X text 211 159 no greeb in 8s;
+#X text 224 181 no blue in 6s;
+#X msg 67 79 rgb 255 255 255 1000;
+#X msg 94 99 rgb 0 0 0 2000;
+#X msg 123 132 r 255 10000;
+#X msg 128 160 g 0 8000;
+#X msg 141 182 b 0 6000;
+#X msg 232 47 rgb 15 200 125 1000;
+#X obj 82 271 ehu/dmx/lights;
+#X msg 185 238 lights 1 3 5;
+#X text 274 237 LIGHTS TO CONTROL;
+#X text 28 1 controls the three chanels in several light at the same
+time;
+#X obj 58 324 ehu/dmx/control 7;
+#X connect 5 0 11 0;
+#X connect 6 0 11 0;
+#X connect 7 0 11 0;
+#X connect 8 0 11 0;
+#X connect 9 0 11 0;
+#X connect 10 0 11 0;
+#X connect 12 0 11 0;

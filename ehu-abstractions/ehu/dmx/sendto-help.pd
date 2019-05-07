@@ -1,0 +1,9 @@
+#N canvas 811 280 450 409 10;
+#X obj 53 238 ehu/dmx/control 7;
+#X obj 72 119 ehu/dmx/sendto;
+#X text 72 23 send a value to many chanels;
+#X text 114 65 value chanel chanel ...;
+#X msg 47 65 255 1 2 3;
+#X msg 123 88 255 4 7 10 13 16;
+#X connect 4 0 1 0;
+#X connect 5 0 1 0;

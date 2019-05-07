@@ -1,0 +1,24 @@
+#N canvas 1397 274 489 384 10;
+#X text 195 101 go black in 5 secs;
+#X text 203 78 go white in 1 secs;
+#X text 206 131 full red in 10s;
+#X text 211 159 no greeb in 8s;
+#X text 224 181 no blue in 6s;
+#X obj 85 236 ehu/dmx/light 4;
+#X text 192 238 light 4: DMX channels 10 \, 11 and 12;
+#X text 28 1 controls the three chanels in a light;
+#X text 25 18 arg: 1 the light to control. light 1 is channels 1 \,
+2 \, 3 and so on;
+#X msg 67 79 rgb 255 255 255 1000;
+#X msg 94 99 rgb 0 0 0 2000;
+#X msg 123 132 r 255 10000;
+#X msg 128 160 g 0 8000;
+#X msg 141 182 b 0 6000;
+#X msg 232 47 rgb 15 200 125 1000;
+#X obj 46 307 ehu/dmx/control 7;
+#X connect 9 0 5 0;
+#X connect 10 0 5 0;
+#X connect 11 0 5 0;
+#X connect 12 0 5 0;
+#X connect 13 0 5 0;
+#X connect 14 0 5 0;
