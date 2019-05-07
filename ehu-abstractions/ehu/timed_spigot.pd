@@ -12,6 +12,7 @@
 #X obj 175 231 outlet;
 #X msg 91 62 stop;
 #X obj 90 36 t f b;
+#X obj 182 17 inlet;
 #X connect 0 0 9 0;
 #X connect 1 0 0 0;
 #X connect 3 0 12 0;
@@ -28,3 +29,5 @@
 #X connect 11 0 6 0;
 #X connect 12 0 6 1;
 #X connect 12 1 11 0;
+#X connect 13 0 11 0;
+#X connect 13 0 8 0;

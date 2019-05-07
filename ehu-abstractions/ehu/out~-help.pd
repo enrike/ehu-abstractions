@@ -13,7 +13,6 @@
 #X text 14 110 outlets : left and right (for monitoring);
 #X obj 323 175 ehu/plot;
 #X connect 1 0 9 0;
-#X connect 1 1 9 0;
 #X connect 2 0 1 0;
 #X connect 2 0 1 1;
 #X connect 3 0 1 3;
