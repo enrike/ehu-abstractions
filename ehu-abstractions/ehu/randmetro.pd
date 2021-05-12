@@ -1,0 +1,18 @@
+#N canvas 662 322 455 374 10;
+#X obj 67 231 outlet;
+#X obj 67 48 inlet;
+#X obj 107 49 inlet;
+#X obj 147 49 inlet;
+#X text 117 30 min / max;
+#X obj 67 103 metro 200;
+#X obj 67 141 random 500;
+#X obj 182 116 +;
+#X msg 67 173 bang;
+#X connect 1 0 5 0;
+#X connect 2 0 7 1;
+#X connect 3 0 6 1;
+#X connect 5 0 6 0;
+#X connect 6 0 7 0;
+#X connect 6 0 8 0;
+#X connect 7 0 5 1;
+#X connect 8 0 0 0;

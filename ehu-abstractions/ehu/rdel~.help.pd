@@ -1,0 +1,26 @@
+#N canvas 592 93 644 316 10;
+#X obj 56 157 rdel~ 5000 1000;
+#X obj 49 211 dac~;
+#X obj 50 115 adc~;
+#X floatatom 116 100 5 0 0 0 - - -, f 5;
+#X text 49 26 arguments: 1 max del line \, 2 actual delay time;
+#X text 156 99 sets the actual delay time;
+#X text 49 9 simple audio delay with (optional) embeded random length
+;
+#X obj 182 119 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X msg 186 153 100 2000;
+#X text 258 154 sets the random min and max and gets a random actual
+delay time;
+#X text 208 120 changes the actual delay time between rand min and
+max;
+#X floatatom 143 196 5 0 0 0 - - -, f 5;
+#X text 179 199 current delay time;
+#X connect 0 0 1 0;
+#X connect 0 0 1 1;
+#X connect 0 1 11 0;
+#X connect 2 0 0 0;
+#X connect 2 1 0 0;
+#X connect 3 0 0 1;
+#X connect 7 0 0 1;
+#X connect 8 0 0 1;

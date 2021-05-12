@@ -1,0 +1,25 @@
+#N canvas 2 50 450 300 10;
+#X obj 154 199 ehu/items;
+#X floatatom 150 235 5 0 0 0 - - -, f 5;
+#X obj 114 142 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X text 40 142 random item;
+#X text 207 107 item by index;
+#X text 349 171 item list;
+#X text 24 15 receives a list or numers on the right inlet;
+#X text 24 42 outputs the item selected by index (on the left inlet)
+;
+#X text 23 65 outputs a random item if bang on left inlet;
+#X msg 275 171 99 88 77 66;
+#X msg 160 97 0;
+#X msg 175 121 1;
+#X msg 206 132 2;
+#X text 235 137 etc...;
+#X floatatom 197 167 5 0 0 0 - - -, f 5;
+#X connect 0 0 1 0;
+#X connect 2 0 0 0;
+#X connect 9 0 0 1;
+#X connect 10 0 0 0;
+#X connect 11 0 0 0;
+#X connect 12 0 0 0;
+#X connect 14 0 0 0;

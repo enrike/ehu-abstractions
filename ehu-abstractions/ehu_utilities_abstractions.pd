@@ -36,3 +36,4 @@ in the given folder;
 #X text 163 616 checks for intersection between point and rect;
 #X obj 29 654 ehu/vdelay;
 #X text 161 651 delays a number;
+#X text 300 652 NOTE: better use pipe;

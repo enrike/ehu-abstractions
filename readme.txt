@@ -1,4 +1,4 @@
-ehu 0.8.6 -  10/2016 by www.ixi audio.net
+ehu 0.8.7 -  05/2019 by www.ixi audio.net
 
 https://github.com/enrike/ehu-abstractions
 
@@ -12,6 +12,8 @@ EHU aims to allow for rapid prototyping of interactive systems.
 
 Most abstractions in EHU encapsulate the GUI controls minimising the job of creating widgets and connections.
 
+NOTE that the Malinette project overlaps with some of the utilities this library provides (the stuff related to graphics with GEM). They solve it more nicely this is why we use Malinette nowadays for the graphics. We keep the GEM abstractions in this library as a legacy while continue adding abstractions in other areas (DMX etc...). Check Malinette here http://malinette.info/en/#downloads
+
 
 -- Contact --
 info@ixi-audio.net any type of feedback and/or contributions are welcome
@@ -20,7 +22,7 @@ info@ixi-audio.net any type of feedback and/or contributions are welcome
 -- HOW TO INSTALL THIS LIBRARY? --
 Like any other PD library http://puredata.info/docs/faq/how-do-i-install-externals-and-help-files
 You can also just keep the ehu folder next to your patches
-Note that EHU relies on some PD externals, all of them are included in PD-Extended (no longer maintained, although it will probably work well). If you want to use EHU within standard vanilla PD you need to install those extras manually or using Deken. You can also use PD-l2ork 
+Note that EHU relies on some PD externals, all of them are included in PD-Extended (no longer maintained, although it will probably work well). If you want to use EHU within standard vanilla PD you need to install those extras manually or using Deken. You can also use PD-l2ork or Malinette 
 
 dependencies:
 The main dependencies are GEM (displaying graphics, cameras and video), GGEE (importing files for images, sound and video playing), HCS (some of the utilities) and cyclone (used in the video playing). This is the complete list
@@ -131,6 +133,9 @@ DMX (experimental controls for DMX, check ehu_dmx_abstractions.pd file)
 ehu/dmx/control
 ehu/dmx/matrix
 ehu/dmx/slider
+ehu/dmx/sendto
+ehu/dmx/light
+ehu/dmx/lights
 
 
 
@@ -180,6 +185,9 @@ Alternatively you can pass a "quality" and "mode " message to ehu/win in the sec
 
 
 -- Changes ---
+0.87
+added couple of DMX utilities and some corrections here and there
+
 0.86 10/2016
 more abstractions added
 
@@ -270,7 +278,7 @@ plot has now a zoom control
 
 
 -- Aknowledgements --
-The EHU library is supported by the Fine Arts college at the UPV/EHU Public University of the Basque Country (Euskal Herriko Universitatea, hence the name EHU) http://www.ehu.es. It is developed in collaboration with Josu Rekalde from the Arte y Tecnologia Department
+The EHU library is supported by the Fine Arts college at the UPV/EHU Public University of the Basque Country (Euskal Herriko Unibersitatea, hence the name EHU) http://www.ehu.es. It is developed in collaboration with Josu Rekalde from the Arte y Tecnologia Department
 
 
 

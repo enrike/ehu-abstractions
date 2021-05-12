@@ -1,0 +1,21 @@
+#N canvas 612 521 450 300 10;
+#X msg 118 80 whistle.wav;
+#X obj 175 188 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 60 136 tgl 15 0 empty empty empty 17 7 0 10 -262144 -1 -1 0
+1;
+#X obj 175 127 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 106 165 ehu/fplayer~;
+#X obj 112 218 dac~;
+#X text 53 118 play/stop;
+#X text 195 188 end reached;
+#X text 29 12 just plays large sound files;
+#X text 115 62 load this file which is located next to this patch;
+#X text 175 108 or open panel to choose a file;
+#X connect 0 0 4 1;
+#X connect 2 0 4 0;
+#X connect 3 0 4 1;
+#X connect 4 0 5 0;
+#X connect 4 1 5 1;
+#X connect 4 2 1 0;

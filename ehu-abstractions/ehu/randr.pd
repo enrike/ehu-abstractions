@@ -1,0 +1,38 @@
+#N canvas 437 126 800 685 10;
+#X obj 19 436 cnv 3 750 3 empty empty OUT 0 12 1 12 -228856 -191407
+0;
+#X obj 19 208 cnv 3 750 3 empty empty IN 0 -6 1 12 -228856 -191407
+0;
+#X obj 720 23 thispath;
+#X floatatom 263 142 5 0 0 0 - - -, f 5;
+#X floatatom 405 135 5 0 0 0 - - -, f 5;
+#X obj 295 228 random;
+#X floatatom 236 299 5 0 0 0 - - -, f 5;
+#X obj 295 265 +;
+#X text 274 117 min;
+#X text 415 103 max;
+#X obj 328 194 -;
+#X obj 173 125 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 263 92 inlet;
+#X obj 405 83 inlet;
+#X obj 173 91 inlet;
+#X obj 295 298 outlet;
+#X obj 491 114 loadbang;
+#X obj 491 155 \$1;
+#X obj 524 155 \$1;
+#X connect 3 0 7 1;
+#X connect 3 0 10 1;
+#X connect 4 0 10 0;
+#X connect 5 0 7 0;
+#X connect 7 0 6 0;
+#X connect 7 0 15 0;
+#X connect 10 0 5 1;
+#X connect 11 0 5 0;
+#X connect 12 0 3 0;
+#X connect 13 0 4 0;
+#X connect 14 0 11 0;
+#X connect 16 0 17 0;
+#X connect 16 0 18 0;
+#X connect 17 0 3 0;
+#X connect 18 0 10 0;
